@@ -63,8 +63,8 @@ The research was AI-assisted, and the paper has not yet been refereed.
 | `supplementary/Eta_Frobenius_Lemma_Audit_v1_0/` | Eta-multiplier and Vélu sign audit: code, results, audit report |
 | `supplementary/Factorial_Conjecture_Result_v1_0/` | Factorial-evaluation code and recorded results under `new_work/`; reproduce with `new_work/run_all.sh` |
 | `supplementary/Fricke_Elliptic_Values_Fifteen_Levels_v1_0/` | Exact elliptic values and model calculations for all fifteen levels (Table 2) |
-| `supplementary/Fricke_Section8_Unified_Certificates_v1_0/ ` | Reruns the existing exact certification routines at all fifteen prime levels |
-| `supplementary/Fricke_Fifteen_Levels_Extension_v1_0/` | Fifteen-level Fricke extension, Theorem 1.1 extends to every prime level |
+| `supplementary/Fricke_Section8_Unified_Certificates_v1_0/` | Reruns the existing exact certification routines at all fifteen prime levels |
+| `supplementary/Fricke_Fifteen_Levels_Extension_v1_0/` | Fifteen-level extension: proof that Theorem 1.1 holds at all fifteen genus-zero prime levels, ten-level verifier, five-level regression, per-pair certificates |
 | `supplementary/Theorem_1_3_Benchmark_v1_0/` | Timing code, exact inputs and outputs, raw timings, verification records |
 | `supplementary/Corollary_1_2_Reconstruction_Benchmark_v1_0/` | Reconstruction benchmark: code, results, verification records |
 
