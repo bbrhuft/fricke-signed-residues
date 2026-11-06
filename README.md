@@ -1,5 +1,49 @@
 # Supersingular poles and signed residues of prime-level Fricke Hauptmoduln
 
+**David Jordan** · Maynooth University Social Sciences Institute (MUSSI), Maynooth University · Manuscript v1.11, 6 November 2026
+
+## About the paper
+
+There are exactly fifteen prime levels $`N`$ for which the Fricke curve $`X_0(N)^+`$ has genus zero:
+$`N \in \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71\}`$.
+For each of these, let $`T_N = q^{-1} + O(q)`$ be the normalized Hauptmodul for $`\Gamma_0(N)^+`$.
+For every prime $`p \ge 5`$ with $`p \nmid N`$, the paper determines the poles and residues of the rational function that represents $`T_N \mid U_p`$ modulo $`p`$.
+
+**Main results**
+
+- **Poles.** The poles are exactly the supersingular values $`t_i`$ with effective ramification index $`e_i = 1`$. All poles are simple.
+- **Signed residues.** For each such pole,
+
+  ```math
+  \operatorname{Res}_{T=t_i} \cdot \prod_{j \ne i} (t_i - t_j)^{(p+1)/e_j} = -\left(\frac{-N}{p}\right),
+  ```
+
+  where the product runs over all distinct supersingular values, including ramified ones.
+- **Reconstruction.** The reduced function vanishes at the cusp and has only simple poles, so its residues determine it completely. The formula therefore rebuilds the reduced $`U_p`$ image from the weighted supersingular values, without a long $`q`$-expansion.
+- **Factorial evaluation.** On the supersingular locus,
+
+  ```math
+  E_{p+1}^{(p-1)/2} = \left(\frac{6}{p}\right)\left(\frac{p-1}{2}\right)!\,\Delta^{(p^2-1)/24}.
+  ```
+
+  The proof applies an iterated theta operator to $`\eta^{p+1}`$ at full level twelve. The evaluation recovers Baker's supersingular congruence.
+- **Discriminant-ratio sign.** Combining the factorial evaluation with Robert's isogeny identity gives
+
+  ```math
+  \left(\frac{\Delta(\tau)}{\Delta(\ell\tau)}\right)^{(p^2-1)/24} = \left(\frac{\ell}{p}\right)
+  ```
+
+  at every supersingular point of $`X_0(\ell)`$, for every prime $`\ell \ne p`$. This determines the sign left open in Ono's half-exponent examples, and it needs no genus-zero hypothesis.
+
+The proof combines a Kaneko–Zagier derivative argument with the factorial evaluation. The ramification indices also have a geometric interpretation as node thicknesses in the Deligne–Rapoport model of the Fricke quotient.
+
+**Computational evidence.** Exact-arithmetic computations give finite certificates for the five eta-coordinate levels ($`N = 2, 3, 5, 7, 13`$) with $`p \le 211`$, and for the ten other levels with $`p \le 47`$. The code, per-pair data and benchmarks are in `supplementary/`.
+
+> **Status:** Preprint, not yet peer reviewed. The work was AI-assisted (OpenAI GPT-6.1 Sol and Claude Opus 5.5) in developing arguments, checking calculations and preparing the manuscript. This assistance is not independent specialist refereeing.
+
+**Keywords:** supersingular elliptic curves; Fricke groups; Hauptmoduln; Hecke operators; eta quotients; congruences.
+
+**Keywords:** supersingular elliptic curves; Fricke groups; Hauptmoduln; Hecke operators; eta quotients; congruences.
 Manuscript, code and data for:
 
 > Jordan, D. (2026). *Supersingular poles and signed residues of prime-level Fricke Hauptmoduln* [Manuscript, version 1.11]. Maynooth University Social Sciences Institute, Maynooth University.
