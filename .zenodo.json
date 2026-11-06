@@ -1,0 +1,22 @@
+{
+  "title": "Supersingular poles and signed residues of prime-level Fricke Hauptmoduln: manuscript, code and data (v1.11)",
+  "upload_type": "software",
+  "description": "<p>Manuscript (version 1.11) and supplementary packages for <em>Supersingular poles and signed residues of prime-level Fricke Hauptmoduln</em>. For each of the fifteen prime levels N with X_0(N)^+ of genus zero and every prime p &ge; 5 with p &ne; N, the paper determines the poles and signed residues of the rational function representing T_N|U_p modulo p, proves the supersingular factorial evaluation of E_{p+1}^{(p-1)/2}, and determines the sign of (&Delta;(&tau;)/&Delta;(&ell;&tau;))^{(p^2-1)/24} at supersingular points of X_0(&ell;).</p><p>The archive contains the LaTeX source and PDF, exact-arithmetic verification code, per-pair certificates and timing benchmarks. Each supplementary package has its own README and SHA-256 manifest.</p><p><strong>Status:</strong> preprint, not yet peer reviewed. AI-assisted (OpenAI GPT-6.1 Sol and Claude Opus 5.5). Code is MIT-licensed; the manuscript and notes are &copy; 2026 David Jordan, all rights reserved, pending publication.</p>",
+  "creators": [
+    {
+      "name": "Jordan, David",
+      "affiliation": "Maynooth University Social Sciences Institute (MUSSI), Maynooth University"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "supersingular elliptic curves",
+    "Fricke groups",
+    "Hauptmoduln",
+    "Hecke operators",
+    "eta quotients",
+    "congruences"
+  ],
+  "language": "eng",
+  "version": "v1.11"
+}
