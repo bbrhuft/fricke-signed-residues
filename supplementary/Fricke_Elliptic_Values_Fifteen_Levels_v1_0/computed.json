@@ -1,0 +1,284 @@
+[
+  {
+    "N": 11,
+    "branch_polynomial": "T**4 + 4*T**3 - 88*T**2 - 668*T - 1272",
+    "branch_factors": [
+      [
+        "T + 6",
+        1
+      ],
+      [
+        "T**3 - 2*T**2 - 76*T - 212",
+        1
+      ]
+    ],
+    "other_factors": [],
+    "h_coefficients": [
+      -1272,
+      -668,
+      -88,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 8, 11: 5, -1: 1}"
+  },
+  {
+    "N": 17,
+    "branch_polynomial": "T**4 + 2*T**3 - 39*T**2 - 176*T - 212",
+    "branch_factors": [
+      [
+        "T**4 + 2*T**3 - 39*T**2 - 176*T - 212",
+        1
+      ]
+    ],
+    "other_factors": [
+      [
+        "T + 2",
+        2
+      ]
+    ],
+    "h_coefficients": [
+      -424,
+      -564,
+      -254,
+      -35,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 16, 17: 4, -1: 1}"
+  },
+  {
+    "N": 19,
+    "branch_polynomial": "T**4 - 32*T**2 - 76*T - 48",
+    "branch_factors": [
+      [
+        "T + 4",
+        1
+      ],
+      [
+        "T**3 - 4*T**2 - 16*T - 12",
+        1
+      ]
+    ],
+    "other_factors": [
+      [
+        "T + 3",
+        3
+      ]
+    ],
+    "h_coefficients": [
+      -144,
+      -276,
+      -172,
+      -32,
+      3,
+      1
+    ],
+    "discriminant_factorisation": "{2: 8, 3: 6, 19: 3, -1: 1}"
+  },
+  {
+    "N": 23,
+    "branch_polynomial": "T**6 + 4*T**5 - 18*T**4 - 142*T**3 - 351*T**2 - 394*T - 175",
+    "branch_factors": [
+      [
+        "T**3 - 2*T**2 - 17*T - 25",
+        1
+      ],
+      [
+        "T**3 + 6*T**2 + 11*T + 7",
+        1
+      ]
+    ],
+    "other_factors": [],
+    "h_coefficients": [
+      -175,
+      -394,
+      -351,
+      -142,
+      -18,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 12, 23: 6}"
+  },
+  {
+    "N": 29,
+    "branch_polynomial": "T**6 + 2*T**5 - 17*T**4 - 66*T**3 - 83*T**2 - 32*T - 4",
+    "branch_factors": [
+      [
+        "T**6 + 2*T**5 - 17*T**4 - 66*T**3 - 83*T**2 - 32*T - 4",
+        1
+      ]
+    ],
+    "other_factors": [
+      [
+        "T + 2",
+        2
+      ]
+    ],
+    "h_coefficients": [
+      -8,
+      -68,
+      -198,
+      -215,
+      -100,
+      -13,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 20, 29: 5}"
+  },
+  {
+    "N": 31,
+    "branch_polynomial": "T**6 + 4*T**5 - 14*T**4 - 94*T**3 - 159*T**2 - 98*T - 27",
+    "branch_factors": [
+      [
+        "T**3 - 17*T - 27",
+        1
+      ],
+      [
+        "T**3 + 4*T**2 + 3*T + 1",
+        1
+      ]
+    ],
+    "other_factors": [
+      [
+        "T",
+        3
+      ]
+    ],
+    "h_coefficients": [
+      0,
+      -27,
+      -98,
+      -159,
+      -94,
+      -14,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 12, 3: 6, 31: 4}"
+  },
+  {
+    "N": 41,
+    "branch_polynomial": "T**8 + 4*T**7 - 8*T**6 - 66*T**5 - 120*T**4 - 56*T**3 + 53*T**2 + 36*T - 16",
+    "branch_factors": [
+      [
+        "T**8 + 4*T**7 - 8*T**6 - 66*T**5 - 120*T**4 - 56*T**3 + 53*T**2 + 36*T - 16",
+        1
+      ]
+    ],
+    "other_factors": [
+      [
+        "T",
+        2
+      ]
+    ],
+    "h_coefficients": [
+      0,
+      -16,
+      36,
+      53,
+      -56,
+      -120,
+      -66,
+      -8,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 24, 41: 6, -1: 1}"
+  },
+  {
+    "N": 47,
+    "branch_polynomial": "T**10 + 4*T**9 + 2*T**8 - 32*T**7 - 135*T**6 - 294*T**5 - 424*T**4 - 410*T**3 - 268*T**2 - 100*T - 19",
+    "branch_factors": [
+      [
+        "T**5 - 5*T**3 - 20*T**2 - 24*T - 19",
+        1
+      ],
+      [
+        "T**5 + 4*T**4 + 7*T**3 + 8*T**2 + 4*T + 1",
+        1
+      ]
+    ],
+    "other_factors": [],
+    "h_coefficients": [
+      -19,
+      -100,
+      -268,
+      -410,
+      -424,
+      -294,
+      -135,
+      -32,
+      2,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 20, 47: 8}"
+  },
+  {
+    "N": 59,
+    "branch_polynomial": "T**12 + 4*T**11 - 28*T**9 - 84*T**8 - 152*T**7 - 202*T**6 - 212*T**5 - 176*T**4 - 120*T**3 - 68*T**2 - 24*T - 11",
+    "branch_factors": [
+      [
+        "T**3 + 2*T**2 + 1",
+        1
+      ],
+      [
+        "T**9 + 2*T**8 - 4*T**7 - 21*T**6 - 44*T**5 - 60*T**4 - 61*T**3 - 46*T**2 - 24*T - 11",
+        1
+      ]
+    ],
+    "other_factors": [],
+    "h_coefficients": [
+      -11,
+      -24,
+      -68,
+      -120,
+      -176,
+      -212,
+      -202,
+      -152,
+      -84,
+      -28,
+      0,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 24, 59: 9, -1: 1}"
+  },
+  {
+    "N": 71,
+    "branch_polynomial": "T**14 + 4*T**13 - 2*T**12 - 38*T**11 - 77*T**10 - 26*T**9 + 111*T**8 + 148*T**7 + T**6 - 122*T**5 - 70*T**4 + 30*T**3 + 40*T**2 + 4*T - 11",
+    "branch_factors": [
+      [
+        "T**7 - 7*T**5 - 11*T**4 + 5*T**3 + 18*T**2 + 4*T - 11",
+        1
+      ],
+      [
+        "T**7 + 4*T**6 + 5*T**5 + T**4 - 3*T**3 - 2*T**2 + 1",
+        1
+      ]
+    ],
+    "other_factors": [],
+    "h_coefficients": [
+      -11,
+      4,
+      40,
+      30,
+      -70,
+      -122,
+      1,
+      148,
+      111,
+      -26,
+      -77,
+      -38,
+      -2,
+      4,
+      1
+    ],
+    "discriminant_factorisation": "{2: 28, 71: 10}"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "README.md": "62e155a2920e35e51914b7f274e6d2f3327959516cf3f20bf7b94856e178ceab",
+  "Table_2_All_Fifteen_Levels.tex": "82e429a199f996c6f15d8e21deaaca6c6f2d232367d76cc2ca7de029eb6b4cf7",
+  "Lemma_and_Table_2_All_Fifteen_Levels.tex": "77e8f99318145e95a42323a46cf1652d61d95d1a395031e9bf948b82dd51251b",
+  "compute.py": "37aabe3665c59c1cd5dd395bc58ec2d20a9566d25fab002154adfb6459d938de",
+  "build_table.py": "aa28f2e54322670c5dd70119ad30fefa9dbdae98bcbddd402acde90011c0df9f",
+  "check_reductions.py": "110c83079805af329a918cb616d470c2b1bf764611284c4d5a982882cbe1505f",
+  "computed.json": "70e223eafce8418df2f089e6a09308c05df62b9fe588714bd0e0285b00dc7c9d",
+  "all_fifteen.json": "959ee6a149b7b5fb3772fd1f4baf6a3a878b848db78238d74e79a47adf8a4471",
+  "reduction_checks.json": "70703d4ac022211a1294d85e68107a4d68d0ac8b3599a36dd8be0a24084abafa",
+  "checks.log": "f04b5b068bdf4b3a4d65bfbc06ed1203f4decef0dab6f495695e2b6abccd22a9",
+  "derivation.log": "79a8e980d2994563639db578c35f31e0721827a1c3efccae95e20ade6ca3fad3",
+  "inherited/hyperelliptic_data.json": "069ecf9c7d403fe6f4f13f4e63e29cdc5463ffd329bb9e67c88ce621b91d0ff0",
+  "inherited/inherited_wr_core.py": "0596c0a81e19a31f60098f5320efef16793b5f1053581dfafcf1e1b2a4d20285",
+  "inherited/verify_extension.py": "b323614ab74f40ae3aefe54fb0d6c7c670f3e64a02a32db071c8f62f331f62b2",
+  "input/Fricke_Signed_Residues_Journal_v1_10.tex": "f3e8812f3687869336f2a547fcecce35406f40e3ed6b890952824c4f7d3f9d3e"
+}

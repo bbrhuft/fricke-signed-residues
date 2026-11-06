@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "scope": "All fifteen levels, all admissible 5<=p<=211; independent smooth-model inertia vs char-zero polynomial roots and indices, not q-series certification",
+  "counts": [
+    {
+      "N": 2,
+      "primes_checked": 45
+    },
+    {
+      "N": 3,
+      "primes_checked": 45
+    },
+    {
+      "N": 5,
+      "primes_checked": 44
+    },
+    {
+      "N": 7,
+      "primes_checked": 44
+    },
+    {
+      "N": 11,
+      "primes_checked": 44
+    },
+    {
+      "N": 13,
+      "primes_checked": 44
+    },
+    {
+      "N": 17,
+      "primes_checked": 44
+    },
+    {
+      "N": 19,
+      "primes_checked": 44
+    },
+    {
+      "N": 23,
+      "primes_checked": 44
+    },
+    {
+      "N": 29,
+      "primes_checked": 44
+    },
+    {
+      "N": 31,
+      "primes_checked": 44
+    },
+    {
+      "N": 41,
+      "primes_checked": 44
+    },
+    {
+      "N": 47,
+      "primes_checked": 44
+    },
+    {
+      "N": 59,
+      "primes_checked": 44
+    },
+    {
+      "N": 71,
+      "primes_checked": 44
+    }
+  ],
+  "pairs": 662
+}

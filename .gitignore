@@ -1,0 +1,22 @@
+# LaTeX build files (log files are deliberately NOT ignored: the *.log files
+# under supplementary/ are recorded verification output cited by the paper)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# C build output
+*.o
+*.so
+a.out
+# OS clutter
+.DS_Store
+Thumbs.db
