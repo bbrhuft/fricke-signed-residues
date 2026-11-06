@@ -1,5 +1,7 @@
 # Supersingular poles and signed residues of prime-level Fricke Hauptmoduln
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24024359.svg)](https://doi.org/10.5281/zenodo.24024359)
+
 **David Jordan** · Maynooth University Social Sciences Institute (MUSSI), Maynooth University · Manuscript v1.11, 6 November 2026
 
 ## About the paper
@@ -53,6 +55,10 @@ Manuscript, code and data for:
 > Jordan, D. (2026). *Supersingular poles and signed residues of prime-level Fricke Hauptmoduln* [Manuscript, version 1.11]. Maynooth University Social Sciences Institute, Maynooth University.
 
 The research was AI-assisted, and the paper has not yet been refereed.
+
+## How to cite
+
+Jordan, D. (2026). *Supersingular poles and signed residues of prime-level Fricke Hauptmoduln: Manuscript, code and data* (Version v1.11) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24024359
 
 ## Repository layout
 
