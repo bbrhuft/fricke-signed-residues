@@ -9,31 +9,35 @@ $`N \in \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71\}`$.
 For each of these, let $`T_N = q^{-1} + O(q)`$ be the normalized Hauptmodul for $`\Gamma_0(N)^+`$.
 For every prime $`p \ge 5`$ with $`p \nmid N`$, the paper determines the poles and residues of the rational function that represents $`T_N \mid U_p`$ modulo $`p`$.
 
-**Main results**
+### Main results
 
-- **Poles.** The poles are exactly the supersingular values $`t_i`$ with effective ramification index $`e_i = 1`$. All poles are simple.
-- **Signed residues.** For each such pole,
+**Poles.** The poles are exactly the supersingular values $`t_i`$ with effective ramification index $`e_i = 1`$. All poles are simple.
 
-  ```math
-  \operatorname{Res}_{T=t_i} \cdot \prod_{j \ne i} (t_i - t_j)^{(p+1)/e_j} = -\left(\frac{-N}{p}\right),
-  ```
+**Signed residues.** For each such pole,
 
-  where the product runs over all distinct supersingular values, including ramified ones.
-- **Reconstruction.** The reduced function vanishes at the cusp and has only simple poles, so its residues determine it completely. The formula therefore rebuilds the reduced $`U_p`$ image from the weighted supersingular values, without a long $`q`$-expansion.
-- **Factorial evaluation.** On the supersingular locus,
+```math
+\mathrm{Res}_{T=t_i} \cdot \prod_{j \ne i} (t_i - t_j)^{(p+1)/e_j} = -\left(\frac{-N}{p}\right),
+```
 
-  ```math
-  E_{p+1}^{(p-1)/2} = \left(\frac{6}{p}\right)\left(\frac{p-1}{2}\right)!\,\Delta^{(p^2-1)/24}.
-  ```
+where the product runs over all distinct supersingular values, including ramified ones.
 
-  The proof applies an iterated theta operator to $`\eta^{p+1}`$ at full level twelve. The evaluation recovers Baker's supersingular congruence.
-- **Discriminant-ratio sign.** Combining the factorial evaluation with Robert's isogeny identity gives
+**Reconstruction.** The reduced function vanishes at the cusp and has only simple poles, so its residues determine it completely. The formula therefore rebuilds the reduced $`U_p`$ image from the weighted supersingular values, without a long $`q`$-expansion.
 
-  ```math
-  \left(\frac{\Delta(\tau)}{\Delta(\ell\tau)}\right)^{(p^2-1)/24} = \left(\frac{\ell}{p}\right)
-  ```
+**Factorial evaluation.** On the supersingular locus,
 
-  at every supersingular point of $`X_0(\ell)`$, for every prime $`\ell \ne p`$. This determines the sign left open in Ono's half-exponent examples, and it needs no genus-zero hypothesis.
+```math
+E_{p+1}^{(p-1)/2} = \left(\frac{6}{p}\right)\left(\frac{p-1}{2}\right)!\,\Delta^{(p^2-1)/24}.
+```
+
+The proof applies an iterated theta operator to $`\eta^{p+1}`$ at full level twelve. The evaluation recovers Baker's supersingular congruence.
+
+**Discriminant-ratio sign.** Combining the factorial evaluation with Robert's isogeny identity gives
+
+```math
+\left(\frac{\Delta(\tau)}{\Delta(\ell\tau)}\right)^{(p^2-1)/24} = \left(\frac{\ell}{p}\right)
+```
+
+at every supersingular point of $`X_0(\ell)`$, for every prime $`\ell \ne p`$. This determines the sign left open in Ono's half-exponent examples, and it needs no genus-zero hypothesis.
 
 The proof combines a Kaneko–Zagier derivative argument with the factorial evaluation. The ramification indices also have a geometric interpretation as node thicknesses in the Deligne–Rapoport model of the Fricke quotient.
 
