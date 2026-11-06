@@ -1,0 +1,115 @@
+% Replace Section 8 from its heading up to, but not including,
+% \subsection{Computational consequences and timings}.
+% Keep that subsection and the existing Data and software paragraph.
+\section{Finite certificates and computational evidence}\label{sec:comp}
+A unified exact-arithmetic rerun covers all fifteen levels in $\mathcal N$
+for $5\le p\le47$, excluding $p=N$. The computations reconstruct
+$R_{N,p}$ independently of the signed residue formula and then verify
+that formula. They are checks on the theorems, not inputs to their proofs.
+The following bound specifies the strength of the certificates.
+
+\begin{proposition}[finite certificate]\label{prop:certificate}
+Let $L=p^2$, let $D\in\Fp[T]$ be a monic divisor of $T^L-T$, of degree $d$, and
+let $P\in\Fp[T]$ have degree less than $d$. If
+\[
+D(\overline T)\,\overline{T|U_p}-P(\overline T)=O(q^{L-d+1}),
+\]
+then $R_{N,p}=P/D$. For $D=1$, take $P=0$.
+\end{proposition}
+\begin{proof}
+Proposition~\ref{prop:res} implies that
+$R_{N,p}-P/D=C/(T^L-T)$ with $\deg C<L$.
+If $C\ne0$, its $q$-order is $L-\deg C$, since $T=q^{-1}+O(q)$.
+Multiplication by $D(T)$ gives order $L-\deg C-d\le L-d$, contradicting the
+hypothesis. Thus $C=0$.
+\end{proof}
+
+For each pair, the supersingular values and effective indices are determined
+from the modular model, giving $D_{\rm thin}$. A separate $q$-expansion
+calculation recovers the numerator without using the residue signs and
+checks Proposition~\ref{prop:certificate}, using source precision at least
+$p^3+2$. The reduced fraction, mass identity, weighted supersingular
+polynomial and signed residue products are also checked.
+
+At $N\in\mathcal N_0$, the inputs are the eta coordinate and its rational
+$j$-map. At the other ten levels, we use the standard smooth elliptic or
+hyperelliptic models $v^2=f_N(u)$ with $w_N(u,v)=(u,-v)$ and relations
+\[
+j+j\circ w_N=\alpha_N(u),\qquad
+j(j\circ w_N)=Q_N(u),
+\]
+\[
+j=\frac{\alpha_N(u)+\beta_N(u)v}{2},
+\quad Q_N=\frac{\alpha_N^2-f_N\beta_N^2}{4}.
+\]
+These are the model data used by SageMath's prime-isogeny routines
+\citep{SageModels}. The coordinate is $T_N=u-s_N$, where
+$s_N=-[u^{N-1}]\alpha_N/N$. Formal Newton inversion of
+$\alpha_N(u(q))=j(q)+j(q^N)$ gives its expansion, with the product relation
+checked separately. Supersingular fibres satisfy
+$j_0^2-j_0\alpha_N(u)+Q_N(u)=0$; the roots of $f_N$ detect Fricke
+ramification, and fibre multiplicities over $j_0=0,1728$ give the reduced
+automorphism orders. Thus the indices are obtained independently of both
+the signed residue formula and the weighted Hasse polynomial.
+
+All 184 admissible pairs pass the finite certificate. They contain
+4458 thin values, of which 3448 lie outside $\Fp$
+(Table~\ref{tab:all-levels}). The freshly reconstructed numerators and
+denominators also agree exactly with the corresponding archived certificates.
+At every thin value the weighted residue product is
+$-\left(\frac{-N}{p}\right)$; pairs with no thin values have an empty
+residue-product set.
+
+\begin{table}[htbp]\centering\small
+\begin{tabular}{rrrr}\toprule
+$N$ & certified pairs & thin values & outside $\Fp$\\\midrule
+2&13&33&8\\
+3&13&47&16\\
+5&12&67&32\\
+7&12&92&54\\
+11&12&136&86\\
+13&12&163&116\\
+17&12&203&140\\
+19&12&231&170\\
+23&12&267&202\\
+29&12&334&260\\
+31&12&350&272\\
+41&12&445&352\\
+47&12&483&382\\
+59&13&733&614\\
+71&13&874&744\\
+\midrule
+Total&184&4458&3448\\\bottomrule
+\end{tabular}
+\caption{Unified certified reconstructions at all fifteen levels for
+$5\le p\le47$, $p\ne N$. Values are distinct geometric $T_N$-values
+within each pair $(N,p)$; counts are summed over the tested primes.}
+\label{tab:all-levels}\label{tab:n0-levels}\label{tab:new-levels}
+\end{table}
+
+The broader archived tests remain supplementary evidence. At the original
+five levels, all 222 admissible pairs through $p=211$ are certified
+(6246 thin values, 4696 outside $\Fp$); candidate-free denominator recovery
+was checked through $p=37$, and Hecke polynomials modulo $p^2$ through
+$p=31$. A further 960 pairs for $223\le p\le1499$ were checked using the
+double-pole formula of Lemma~\ref{lem:g}; these are not independent
+reconstructions from $T|U_p$.
+
+The eta/Frobenius identity was tested independently using normalized
+V\'elu quotients and discriminants, without eta functions or Hauptmoduln.
+For the 15 primes $\ell\le47$ and admissible $5\le p\le199$, all 647 pairs
+and 127541 cyclic-kernel checks gave the asserted discriminant-ratio sign.
+These count kernels on chosen supersingular representatives, not distinct
+coarse points, since automorphisms can identify kernels at $j=0,1728$.
+
+For Theorem~\ref{thm:factorial}, exact polynomial remainders and evaluations
+at all 6430 supersingular $j$-values for the 166 primes $5\le p\le997$
+(4734 outside $\Fp$) agree with the asserted constant. Evaluations use three
+randomly rescaled models per value, with additional Legendre and Weierstrass
+coefficient routes. Negating the constant fails at every tested prime.
+The two theta identities in the proof were also checked in
+$\Fp[E_4,E_6]$ at $p=23,47,71,167$, where $\eta^{p+1}$ has level one.
+The fresh all-level records and reproduction script are supplied in
+\path{Fricke_Section8_Unified_Certificates_v1_0}; historical evidence
+packages are retained unchanged.
+

@@ -1,0 +1,1474 @@
+[
+  {
+    "N": 2,
+    "p": 5,
+    "thin": 0,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 7,
+    "thin": 0,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 11,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 13,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 17,
+    "thin": 2,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 19,
+    "thin": 2,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 23,
+    "thin": 2,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 29,
+    "thin": 3,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 31,
+    "thin": 3,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 37,
+    "thin": 4,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 41,
+    "thin": 5,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 43,
+    "thin": 5,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 2,
+    "p": 47,
+    "thin": 5,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 5,
+    "thin": 0,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 7,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 11,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 13,
+    "thin": 2,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 17,
+    "thin": 2,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 19,
+    "thin": 3,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 23,
+    "thin": 3,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 29,
+    "thin": 4,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 31,
+    "thin": 5,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 37,
+    "thin": 6,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 41,
+    "thin": 6,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 43,
+    "thin": 7,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 3,
+    "p": 47,
+    "thin": 7,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 7,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 11,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 13,
+    "thin": 2,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 17,
+    "thin": 3,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 19,
+    "thin": 3,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 23,
+    "thin": 5,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 29,
+    "thin": 7,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 31,
+    "thin": 6,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 37,
+    "thin": 8,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 41,
+    "thin": 10,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 43,
+    "thin": 10,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 5,
+    "p": 47,
+    "thin": 11,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 5,
+    "thin": 0,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 11,
+    "thin": 3,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 13,
+    "thin": 3,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 17,
+    "thin": 4,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 19,
+    "thin": 5,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 23,
+    "thin": 7,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 29,
+    "thin": 9,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 31,
+    "thin": 9,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 37,
+    "thin": 12,
+    "nonrational_thin": 8,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 41,
+    "thin": 12,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 43,
+    "thin": 14,
+    "nonrational_thin": 12,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 7,
+    "p": 47,
+    "thin": 14,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 11,
+    "p": 5,
+    "thin": 2,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 7,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 13,
+    "thin": 4,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 17,
+    "thin": 6,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 19,
+    "thin": 7,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 23,
+    "thin": 11,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 29,
+    "thin": 12,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 31,
+    "thin": 15,
+    "nonrational_thin": 8,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 37,
+    "thin": 18,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 41,
+    "thin": 18,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 43,
+    "thin": 19,
+    "nonrational_thin": 16,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 11,
+    "p": 47,
+    "thin": 23,
+    "nonrational_thin": 20,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 13,
+    "p": 5,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 7,
+    "thin": 3,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 11,
+    "thin": 5,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 17,
+    "thin": 9,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 19,
+    "thin": 10,
+    "nonrational_thin": 8,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 23,
+    "thin": 11,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 29,
+    "thin": 16,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 31,
+    "thin": 17,
+    "nonrational_thin": 16,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 37,
+    "thin": 20,
+    "nonrational_thin": 16,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 41,
+    "thin": 22,
+    "nonrational_thin": 20,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 43,
+    "thin": 23,
+    "nonrational_thin": 16,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 13,
+    "p": 47,
+    "thin": 26,
+    "nonrational_thin": 18,
+    "certificate": true,
+    "source": "eta-coordinate verifier"
+  },
+  {
+    "N": 17,
+    "p": 5,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 7,
+    "thin": 4,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 11,
+    "thin": 7,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 13,
+    "thin": 9,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 19,
+    "thin": 11,
+    "nonrational_thin": 8,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 23,
+    "thin": 16,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 29,
+    "thin": 19,
+    "nonrational_thin": 16,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 31,
+    "thin": 22,
+    "nonrational_thin": 14,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 37,
+    "thin": 25,
+    "nonrational_thin": 16,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 41,
+    "thin": 28,
+    "nonrational_thin": 26,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 43,
+    "thin": 29,
+    "nonrational_thin": 18,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 17,
+    "p": 47,
+    "thin": 32,
+    "nonrational_thin": 22,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 5,
+    "thin": 3,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 7,
+    "thin": 5,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 11,
+    "thin": 8,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 13,
+    "thin": 8,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 17,
+    "thin": 13,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 23,
+    "thin": 18,
+    "nonrational_thin": 14,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 29,
+    "thin": 21,
+    "nonrational_thin": 8,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 31,
+    "thin": 23,
+    "nonrational_thin": 18,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 37,
+    "thin": 28,
+    "nonrational_thin": 22,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 41,
+    "thin": 31,
+    "nonrational_thin": 20,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 43,
+    "thin": 35,
+    "nonrational_thin": 32,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 19,
+    "p": 47,
+    "thin": 38,
+    "nonrational_thin": 32,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 5,
+    "thin": 1,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 7,
+    "thin": 3,
+    "nonrational_thin": 0,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 11,
+    "thin": 7,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 13,
+    "thin": 12,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 17,
+    "thin": 13,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 19,
+    "thin": 15,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 29,
+    "thin": 28,
+    "nonrational_thin": 24,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 31,
+    "thin": 30,
+    "nonrational_thin": 24,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 37,
+    "thin": 33,
+    "nonrational_thin": 24,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 41,
+    "thin": 40,
+    "nonrational_thin": 32,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 43,
+    "thin": 39,
+    "nonrational_thin": 30,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 23,
+    "p": 47,
+    "thin": 46,
+    "nonrational_thin": 42,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 5,
+    "thin": 5,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 7,
+    "thin": 4,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 11,
+    "thin": 12,
+    "nonrational_thin": 8,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 13,
+    "thin": 15,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 17,
+    "thin": 17,
+    "nonrational_thin": 14,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 19,
+    "thin": 22,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 23,
+    "thin": 24,
+    "nonrational_thin": 20,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 31,
+    "thin": 37,
+    "nonrational_thin": 24,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 37,
+    "thin": 42,
+    "nonrational_thin": 36,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 41,
+    "thin": 47,
+    "nonrational_thin": 42,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 43,
+    "thin": 52,
+    "nonrational_thin": 40,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 29,
+    "p": 47,
+    "thin": 57,
+    "nonrational_thin": 52,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 5,
+    "thin": 5,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 7,
+    "thin": 8,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 11,
+    "thin": 10,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 13,
+    "thin": 13,
+    "nonrational_thin": 12,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 17,
+    "thin": 18,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 19,
+    "thin": 24,
+    "nonrational_thin": 20,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 23,
+    "thin": 26,
+    "nonrational_thin": 20,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 29,
+    "thin": 34,
+    "nonrational_thin": 20,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 37,
+    "thin": 45,
+    "nonrational_thin": 40,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 41,
+    "thin": 53,
+    "nonrational_thin": 34,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 43,
+    "thin": 53,
+    "nonrational_thin": 48,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 31,
+    "p": 47,
+    "thin": 61,
+    "nonrational_thin": 56,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 5,
+    "thin": 7,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 7,
+    "thin": 10,
+    "nonrational_thin": 4,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 11,
+    "thin": 17,
+    "nonrational_thin": 12,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 13,
+    "thin": 17,
+    "nonrational_thin": 14,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 17,
+    "thin": 24,
+    "nonrational_thin": 22,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 19,
+    "thin": 31,
+    "nonrational_thin": 22,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 23,
+    "thin": 34,
+    "nonrational_thin": 26,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 29,
+    "thin": 45,
+    "nonrational_thin": 40,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 31,
+    "thin": 48,
+    "nonrational_thin": 28,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 37,
+    "thin": 63,
+    "nonrational_thin": 50,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 43,
+    "thin": 69,
+    "nonrational_thin": 58,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 41,
+    "p": 47,
+    "thin": 80,
+    "nonrational_thin": 72,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 5,
+    "thin": 3,
+    "nonrational_thin": 2,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 7,
+    "thin": 12,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 11,
+    "thin": 15,
+    "nonrational_thin": 12,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 13,
+    "thin": 19,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 17,
+    "thin": 32,
+    "nonrational_thin": 24,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 19,
+    "thin": 31,
+    "nonrational_thin": 24,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 23,
+    "thin": 39,
+    "nonrational_thin": 34,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 29,
+    "thin": 51,
+    "nonrational_thin": 44,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 31,
+    "thin": 55,
+    "nonrational_thin": 48,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 37,
+    "thin": 72,
+    "nonrational_thin": 52,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 41,
+    "thin": 75,
+    "nonrational_thin": 64,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 47,
+    "p": 43,
+    "thin": 79,
+    "nonrational_thin": 62,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 5,
+    "thin": 10,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 7,
+    "thin": 15,
+    "nonrational_thin": 10,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 11,
+    "thin": 19,
+    "nonrational_thin": 14,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 13,
+    "thin": 24,
+    "nonrational_thin": 14,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 17,
+    "thin": 40,
+    "nonrational_thin": 36,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 19,
+    "thin": 45,
+    "nonrational_thin": 34,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 23,
+    "thin": 49,
+    "nonrational_thin": 44,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 29,
+    "thin": 70,
+    "nonrational_thin": 56,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 31,
+    "thin": 69,
+    "nonrational_thin": 58,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 37,
+    "thin": 84,
+    "nonrational_thin": 64,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 41,
+    "thin": 100,
+    "nonrational_thin": 92,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 43,
+    "thin": 99,
+    "nonrational_thin": 84,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 59,
+    "p": 47,
+    "thin": 109,
+    "nonrational_thin": 102,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 5,
+    "thin": 12,
+    "nonrational_thin": 8,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 7,
+    "thin": 11,
+    "nonrational_thin": 6,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 11,
+    "thin": 23,
+    "nonrational_thin": 18,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 13,
+    "thin": 29,
+    "nonrational_thin": 20,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 17,
+    "thin": 41,
+    "nonrational_thin": 32,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 19,
+    "thin": 54,
+    "nonrational_thin": 40,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 23,
+    "thin": 59,
+    "nonrational_thin": 54,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 29,
+    "thin": 84,
+    "nonrational_thin": 76,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 31,
+    "thin": 83,
+    "nonrational_thin": 66,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 37,
+    "thin": 108,
+    "nonrational_thin": 96,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 41,
+    "thin": 113,
+    "nonrational_thin": 90,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 43,
+    "thin": 126,
+    "nonrational_thin": 116,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  },
+  {
+    "N": 71,
+    "p": 47,
+    "thin": 131,
+    "nonrational_thin": 122,
+    "certificate": true,
+    "source": "elliptic/hyperelliptic verifier"
+  }
+]

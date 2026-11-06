@@ -1,0 +1,101 @@
+{
+  "levels": [
+    {
+      "N": 2,
+      "pairs": 13,
+      "thin": 33,
+      "nonrational": 8
+    },
+    {
+      "N": 3,
+      "pairs": 13,
+      "thin": 47,
+      "nonrational": 16
+    },
+    {
+      "N": 5,
+      "pairs": 12,
+      "thin": 67,
+      "nonrational": 32
+    },
+    {
+      "N": 7,
+      "pairs": 12,
+      "thin": 92,
+      "nonrational": 54
+    },
+    {
+      "N": 11,
+      "pairs": 12,
+      "thin": 136,
+      "nonrational": 86
+    },
+    {
+      "N": 13,
+      "pairs": 12,
+      "thin": 163,
+      "nonrational": 116
+    },
+    {
+      "N": 17,
+      "pairs": 12,
+      "thin": 203,
+      "nonrational": 140
+    },
+    {
+      "N": 19,
+      "pairs": 12,
+      "thin": 231,
+      "nonrational": 170
+    },
+    {
+      "N": 23,
+      "pairs": 12,
+      "thin": 267,
+      "nonrational": 202
+    },
+    {
+      "N": 29,
+      "pairs": 12,
+      "thin": 334,
+      "nonrational": 260
+    },
+    {
+      "N": 31,
+      "pairs": 12,
+      "thin": 350,
+      "nonrational": 272
+    },
+    {
+      "N": 41,
+      "pairs": 12,
+      "thin": 445,
+      "nonrational": 352
+    },
+    {
+      "N": 47,
+      "pairs": 12,
+      "thin": 483,
+      "nonrational": 382
+    },
+    {
+      "N": 59,
+      "pairs": 13,
+      "thin": 733,
+      "nonrational": 614
+    },
+    {
+      "N": 71,
+      "pairs": 13,
+      "thin": 874,
+      "nonrational": 744
+    }
+  ],
+  "total": {
+    "pairs": 184,
+    "thin": 4458,
+    "nonrational": 3448
+  },
+  "all_certificates_pass": true,
+  "historical_fraction_matches": 184
+}

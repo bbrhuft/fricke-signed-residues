@@ -1,0 +1,14 @@
+{
+  "certificate_pairs": 184,
+  "thin_values": 4458,
+  "nonrational_thin_values": 3448,
+  "all_historical_fractions_match": true,
+  "latex_compilation": "PASS, no warnings or overfull boxes in final log",
+  "visual_table_check": "PASS, unified table on page 18 of internal v1.10 validation copy",
+  "finite_certificate_proposition_and_proof": "Copied verbatim",
+  "replacement_scope": "Section 8 heading through evidence paragraphs, stopping before computational timings subsection",
+  "source_token_counts_before_after": [
+    773,
+    606
+  ]
+}
