@@ -1,6 +1,6 @@
 # A factorial supersingular congruence and signed discriminant ratios
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24024359.svg)](https://doi.org/10.5281/zenodo.24024359)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24084789.svg)](https://doi.org/10.5281/zenodo.24084789)
 
 **David Jordan** · Maynooth University Social Sciences Institute (MUSSI), Maynooth University · Manuscript v1.13, 7 November 2026
 
@@ -56,7 +56,7 @@ The ramification indices also describe node thicknesses in the Deligne–Rapopor
 
 ## How to cite
 
-Jordan, D. (2026). *A factorial supersingular congruence and signed discriminant ratios: Manuscript, code and data* (Version v1.13) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24024359
+Jordan, D. (2026). *A factorial supersingular congruence and signed discriminant ratios: Manuscript, code and data* (Version v1.13) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24084789
 
 ## Repository layout
 
