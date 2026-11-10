@@ -34,60 +34,54 @@
 % Set this to the public evidence repository URL or DOI landing page before submission.
 \newcommand{\DataRepositoryURL}{https://github.com/bbrhuft/fricke-signed-residues/tree/main/supplementary}
 
-\title{A factorial supersingular congruence\\and signed discriminant ratios}
+% ---------------------------------------------------------------------
+% v2.0 (9 Nov 2026). Paper B of two. The combined manuscript v1.14 was split:
+% this paper contains the Fricke application (old Sections 1.3-1.4, 4-8).
+% The factorial evaluation and the signed discriminant-ratio identity are in
+% the companion paper "A factorial supersingular congruence and signed
+% discriminant ratios" and enter here only through Theorem 1.1.
+% Statements and proofs are those of v1.14, except:
+%  * Theorem 1.2(d) and Proposition 4.3 now state r_i W_i = beta(E) D_N(x)^k;
+%    the further expression (N/p) c(E) c(E') was dropped, since it needs
+%    Robert's isogeny identity and the constant c(E) of the companion paper;
+%  * part (e) is deduced from Baker's congruence and the companion theorem.
+% Open items for the author: search for "TODO(author)".
+% ---------------------------------------------------------------------
+\title{Supersingular poles and signed residues\\of prime-level Fricke Hauptmoduln}
 \author{David Jordan}
-\date{7 November 2026}
+\date{9 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-For every prime $p\ge5$, we prove the supersingular congruence
-\[
-E_{p+1}^{(p-1)/2}\equiv
-\left(\frac6p\right)\left(\frac{p-1}{2}\right)!
-\Delta^{(p^2-1)/24}\pmod{(p,E_{p-1})}.
-\]
-It evaluates a half-power ratio uniformly on the supersingular locus
-and recovers Baker's congruence upon squaring. The proof applies an
-iterated theta operator to $\eta^{p+1}$ and uses Euler's pentagonal
-identity to determine the sign. Combined with Robert's isogeny identity,
-it gives
-\[
-\left(\frac{\Delta(\tau)}{\Delta(\ell\tau)}\right)^{(p^2-1)/24}
-=\left(\frac{\ell}{p}\right)
-\]
-at every supersingular point of $X_0(\ell)$ for every prime $\ell\ne p$.
-This determines the half-exponent sign in Ono's supersingular
-discriminant-ratio identity and extends to arbitrary prime-to-$p$
-isogenies. As an application, for each of the fifteen prime levels $N$
-with $g(X_0(N)^+)=0$, we determine the poles and signed residues of the
-rational function representing $T_N|U_p$ modulo $p$, where
-$T_N=q^{-1}+O(q)$ and $p\ne N$. Its poles are precisely the
+Let $N$ be one of the fifteen primes for which $X_0(N)^+$ has genus zero,
+let $T_N=q^{-1}+O(q)$ be its Hauptmodul, and let $p\ge5$ be a prime with
+$p\ne N$. We determine the poles and signed residues of the rational
+function representing $T_N|U_p$ modulo $p$. Its poles are precisely the
 supersingular values with effective ramification index one, and each
 residue multiplied by the weighted product of differences from all
 other supersingular values equals $-\left(\frac{-N}{p}\right)$.
+Consequently the supersingular values and their indices determine the
+reduced function. The sign rests on Baker's supersingular congruence and
+on the signed discriminant-ratio identity of a companion paper.
 The indices also describe node thicknesses in the Deligne--Rapoport
 Fricke quotient. Exact computations provide independent finite
 certificates for the residue formula at all fifteen levels.
 \end{abstract}
-\noindent\textbf{Keywords:} supersingular congruences; Eisenstein series; discriminant ratios; isogenies; Fricke Hauptmoduln; Hecke operators.
+\noindent\textbf{Keywords:} supersingular elliptic curves; Fricke groups; Hauptmoduln; Hecke operators; eta quotients; congruences.
 
 \section{Introduction}\label{sec:intro}
-Baker's supersingular congruence determines the square of a ratio
-formed from $E_{p+1}$ and $\Delta$ \citep{Baker98}. We evaluate the
-ratio itself explicitly, obtaining a factorial and a Legendre symbol
-that are independent of the supersingular elliptic curve. This refines
-Baker's congruence and, together with Robert's isogeny identity,
-determines the half-exponent sign of a normalized discriminant ratio
-along every prime-to-$p$ isogeny. Neither result requires a genus-zero
-hypothesis.
-
-Our main application concerns the reduction of $U_p$ applied to a
+This paper concerns the reduction of $U_p$ applied to a
 Fricke Hauptmodul. At each of the fifteen prime levels with genus-zero
 Fricke quotient, we determine the pole divisor and signed residues of
 the reduced function. The ramification indices of the quotient remove
 certain supersingular points from the pole divisor, but those points
 remain in the weighted residue product. The formula reconstructs the
 entire reduced function from the supersingular values and their indices.
+
+The sign in the residue formula comes from two supersingular identities,
+recalled in Theorem~\ref{thm:input}: Baker's congruence \citep{Baker98}
+and the signed discriminant-ratio identity proved in the companion paper
+\citep{JordanFactorial}.
 
 \subsection{Notation}
 Let $p\ge5$ be prime and put
@@ -108,79 +102,42 @@ When a modular form is evaluated at an elliptic curve, a nonzero
 invariant differential is understood. Ratios of equal weight are
 independent of its choice. In particular, set
 \[
-c(E):=\frac{B(E,\omega)^h}{\Delta(E,\omega)^k}.
+\beta(E):=\frac{B(E,\omega)^{p-1}}{\Delta(E,\omega)^{2k}}.
 \]
 
-\subsection{The factorial congruence and discriminant ratios}
-The first result evaluates $c(E)$, rather than only its square.
+\subsection{Two supersingular identities}
+For a prime $N\ne p$, put $D_N=\Delta(\tau)/\Delta(N\tau)$. It is a ratio
+of two forms of weight $12$ on $\Gamma_0(N)$ with integral $q$-expansions,
+neither of which vanishes on the non-cuspidal curve $Y_0(N)$ over
+$\Z[1/N]$. It is therefore a unit on $Y_0(N)$, and we use the same
+notation for its reduction modulo $p$. A description of $D_N$ in terms of
+the isogeny $E\to E/C$ is given in \citet{JordanFactorial}.
 
-\begin{theorem}[supersingular factorial evaluation]\label{thm:factorial}
-For every prime $p\ge5$, every supersingular elliptic curve $E/\Fb$ and
-every nonzero invariant differential $\omega$,
-\begin{equation}\label{eq:factorial-evaluation}
-B(E,\omega)^h=\Lp6\,h!\,\Delta(E,\omega)^k.
-\end{equation}
-Equivalently, in the graded ring $\Fp[E_4,E_6]$,
-\begin{equation}\label{eq:factorial-divisibility}
-A\mid B^h-\Lp6\,h!\,\Delta^k.
-\end{equation}
+% TODO(author): the theorem number for Baker is that of the author's posted
+% version of the paper; check it against the journal version.
+\begin{theorem}[supersingular inputs]\label{thm:input}
+Let $p\ge5$ and $N\ne p$ be primes.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \textup{\citep[Theorem~1.4]{Baker98}.} For every supersingular elliptic
+curve $E/\Fb$,
+\[
+\beta(E)=-\Lp{-1}.
+\]
+\item \textup{\citep[Theorem~1.3]{JordanFactorial}.} At every supersingular
+point $x$ of $Y_0(N)_{\Fb}$,
+\[
+D_N(x)^{(p^2-1)/24}=\Lp N.
+\]
+\end{enumerate}
 \end{theorem}
 
-The proof in Section~\ref{sec:factorial} applies the Serre--Robert
-theta-iteration method to $F=\eta^{p+1}$. Euler's pentagonal identity
-makes the relevant quadratic twist explicit, and comparison with the
-iterated operator determines the factorial and its sign uniformly in $p$.
-Squaring the evaluation recovers Baker's congruence.
+Part (ii) refines the identity $D_N(x)^{(p^2-1)/12}=1$ of
+\citet[Theorem~1.2]{Ono25}. It is deduced in \citet{JordanFactorial} from
+the evaluation $B(E,\omega)^h=\Lp6\,h!\,\Delta(E,\omega)^k$ on the
+supersingular locus, which also recovers part (i).
 
-\begin{corollary}[constancy and Baker's congruence]\label{cor:D}
-The value $c(E)$ is the same for all supersingular $E/\Fb$, namely
-$c_p=\Lp6\,h!\in\Fp^\times$. In particular
-$c_p^2=-\Lp{-1}$, and
-\[
-E_{p+1}^{p-1}\equiv-\Lp{-1}\Delta^{(p^2-1)/12}
-\pmod{(p,E_{p-1})}.
-\]
-\end{corollary}
-
-For a prime $\ell$, let $Y_0(\ell)$ denote the non-cuspidal modular
-curve over $\Z[1/\ell]$. For $x=(E,C)$, let $\pi:E\to E'=E/C$ and
-choose a nonzero invariant differential $\omega'$ on $E'$. Define
-\begin{equation}\label{eq:Dmoduli}
-D_\ell(E,C):=\ell^{12}
-\frac{\Delta(E,\pi^*\omega')}{\Delta(E',\omega')}.
-\end{equation}
-The differential weights make this independent of $\omega'$ and of the
-representative of $x$. It is a unit on $Y_0(\ell)$ over $\Z[1/\ell]$,
-with $q$-expansion $\Delta(q)/\Delta(q^\ell)$: on the Tate curve with
-$C=\mu_\ell$, $\pi^*\omega'_{\rm can}=\ell\omega_{\rm can}$.
-Its complex realization is therefore $\Delta(\tau)/\Delta(\ell\tau)$.
-We use the same notation for its reduction at $p\ne\ell$.
-
-\begin{samepage}
-\begin{theorem}[signed discriminant ratio]\label{thm:C}
-Let $p\ge5$ and $\ell\ne p$ be primes. At every supersingular point
-$x$ of $Y_0(\ell)_{\Fb}$,
-\[
-D_\ell(x)^{(p^2-1)/24}=\leg{\ell}{p}.
-\]
-\end{theorem}
-\end{samepage}
-
-
-
-\citet[Theorem~1.2]{Ono25} proves the corresponding identity at exponent
-$2k=(p^2-1)/12$ for the reciprocal ratio
-$\Delta(\ell\tau)/\Delta(\tau)$, and his Remark~4 exhibits values
-with nontrivial half-exponent sign. Theorem~\ref{thm:C} determines
-that sign uniformly as $\left(\frac{\ell}{p}\right)$.
-Section~\ref{sec:proof} deduces the theorem from
-Theorem~\ref{thm:factorial} and Robert's isogeny identity, and extends
-it to arbitrary prime-to-$p$ isogenies. This is a refinement of the
-supersingular identity used by Ono; no new assertion about the
-Adams--Novikov spectral sequence is made here.
-
-\subsection{Application to Fricke Hauptmoduln}
-Throughout the pole and residue results,
+\subsection{The residue formula}
+Throughout,
 \[
 N\in\mathcal N:=\{2,3,5,7,11,13,17,19,23,29,31,41,47,59,71\},
 \]
@@ -205,12 +162,12 @@ The pairs $(a_N,b_N)$ are $(24,4096),(12,729),(6,125),(4,49),(2,13)$.
 Here $u_N$ is a coordinate on $X_0(N)$ and $w_N$ sends it to $b_N/u_N$.
 This eta presentation is not used to define $T_N$ at the ten other levels.
 
-For the Fricke application, write $T=T_N$ and
+Write $T=T_N$ and
 $\Delta_N=\Delta(\tau)\Delta(N\tau)$. The level $N$ and the
 reduction prime $p$ play distinct roles: $p$ need not belong to
 $\mathcal N$, and $p=N$ is excluded.
 At the five eta-coordinate levels, $D_N=u_N^{N-1}$, so
-Theorem~\ref{thm:C} gives
+Theorem~\ref{thm:input}(ii) gives
 \[
 u_N(x)^{(p^2-1)/a_N}=\Lp N
 \]
@@ -224,7 +181,10 @@ $x=(E,C)$ of $X_0(N)_{\Fb}$ over $t_i$ put
 \[
 m_x=\bigl|\Aut(E,C)/\{\pm1\}\bigr|,\qquad e_i=m_x\,\bigl|\Stab_{\langle w_N\rangle}(x)\bigr|.
 \]
-Call $t_i$ \emph{thin} if $e_i=1$ and put $D_{\rm thin}(T)=\prod_{e_i=1}(T-t_i)$. For thin $t_i$ let
+Call $t_i$ \emph{thin} if $e_i=1$ and \emph{thick} if $e_i>1$; the terms refer to the
+node-thickness interpretation of Section~\ref{sec:geometry}. Put
+$D_{\rm thin}(T)=\prod_{e_i=1}(T-t_i)$. With $R_{N,p}$ the rational function of
+Theorem~\ref{thm:main}(a) below, let, for thin $t_i$,
 \[
 r_i=\Res_{T=t_i}R_{N,p}(T),\qquad W_i=\prod_{j\ne i}(t_i-t_j)^{(p+1)/e_j}.
 \]
@@ -232,14 +192,8 @@ Section~\ref{sec:weights} shows that $e_i$ does not depend on the representative
 orbit, that it is the effective (tame) inertia of the quotient map at $x$ (not the order of a group
 containing $\pm1$), and that every exponent $(p+1)/e_j$ is an integer.
 
-We call a supersingular value $t_i$ \emph{thin} if $e_i=1$
-and \emph{thick} if $e_i>1$. These terms refer to the node
-thickness interpretation established in Section~\ref{sec:geometry}.
-Only thin values give poles of $R_{N,p}$; every such pole is simple.
-Put
-\[
-D_{\rm thin}(T)=\prod_{e_i=1}(T-t_i).
-\]
+Only thin values give poles of $R_{N,p}$, and every such pole is simple
+(Theorem~\ref{thm:main}(b)).
 
 \begin{maintheorem}[Fricke residue formula]\label{thm:main}
 Let $N\in\mathcal N$ and let $p\ge5$ be a prime with $p\ne N$.
@@ -252,9 +206,9 @@ $\deg P<\deg D_{\rm thin}$ and $\gcd(P,D_{\rm thin})=1$. Every pole is simple an
 r_i=\frac{144\,(\theta T)(x)^{p+1}}{B(x)^2},\qquad \theta=q\frac{d}{dq},
 \]
 a ratio of two mod-$p$ modular forms of weight $2(p+1)$, evaluated at $x$.
-\item \textbf{(Product.)} For thin $t_i$, with $x=(E,C)$ over $t_i$ and $E'=E/C$,
+\item \textbf{(Product.)} For thin $t_i$ and $x=(E,C)$ over $t_i$,
 \[
-r_iW_i=\frac{B^{p-1}}{\Delta_N^{\,k}}(x)=\Lp{N}\,c(E)\,c(E').
+r_iW_i=\frac{B^{p-1}}{\Delta_N^{\,k}}(x)=\beta(E)\,D_N(x)^k.
 \]
 \item \textbf{(Signed weighted residue formula.)} For every thin $t_i$,
 \[
@@ -292,10 +246,9 @@ $f'/f=\sum_{f(t_i)=0}(T-t_i)^{-1}$ gives the second formula.
 
 The residues determine the reduced function because it has only simple
 poles and vanishes at the cusp. Corollary~\ref{cor:reconstruction}
-therefore gives an algorithm without a long $q$-expansion once the
-weighted supersingular data are supplied. Section~\ref{subsec:benchmarks}
-records the resulting reduction in the amount of data required;
-implementation comparisons are provided with the supplementary software.
+therefore reconstructs $R_{N,p}$ from the supersingular values and their
+indices alone. Remark~\ref{rem:datasize} compares the size of these data
+with that of a $q$-expansion certificate.
 The same effective indices are interpreted as node thicknesses in
 Section~\ref{sec:geometry}.
 
@@ -322,11 +275,11 @@ $D_{\rm thin}=\mathcal S_{N,p}/\prod_{e_i>1}(T-t_i)$, while the omitted
 values still occur in the weights $W_i$.
 For these five levels the exceptional values can also be specified
 by a polynomial independent of $p$.
-Let $h_N$ be the elliptic-value polynomial in Table~\ref{tab:elliptic-values}.
+Let $\mathfrak h_N$ be the elliptic-value polynomial in Table~\ref{tab:elliptic-values}.
 Lemma~\ref{lem:elliptic-specialization} and Theorem~\ref{thm:main}(b) give
 \begin{equation}\label{eq:elliptic-gcd}
 D_{\rm thin}(T)=\frac{\mathcal S_{N,p}(T)}
-{\gcd\bigl(\mathcal S_{N,p}(T),\overline h_N(T)\bigr)},
+{\gcd\bigl(\mathcal S_{N,p}(T),\overline{\mathfrak h}_N(T)\bigr)},
 \end{equation}
 where the gcd is monic. Thus the denominator is obtained from Nakaya's
 supersingular polynomial by removing its common factors with the reduction
@@ -380,40 +333,8 @@ These entries are included in the certificates of Section~\ref{sec:comp}.}
 \end{table}
 
 \subsection{Relation to earlier work}
-\citet{Baker98} proves the supersingular congruence for $B^{p-1}$
-recovered in Corollary~\ref{cor:D}. Theorem~\ref{thm:factorial}
-refines it by evaluating the half-power ratio $c(E)$ explicitly and
-showing that this value is independent of the supersingular curve.
-The isogeny transformation of $B$ is due to
-\citet[Th\'eor\`eme B, p.~106; \S3.3, Lemma~7 and (19), p.~124]{Robert80};
-we include a $q$-expansion proof to fix the differential normalization.
-
-The factorial evaluation uses a classical mechanism: Serre's functional
-equation for Eisenstein series, presented by
-\citet[\S2.5, Th\'eor\`eme~2, p.~119]{Robert80}, produces factorial
-coefficients by iterating theta and then evaluating on the supersingular
-locus. We apply that mechanism to the form $\eta^{p+1}$ of weight
-$(p+1)/2$ at full level twelve. Its explicit quadratic twist gives the
-signed value of $c_p$ simultaneously in all residue classes of $p$
-modulo twelve. Robert's cited theorem concerns pairs of even-weight
-Eisenstein series with complementary weights summing to $p+1$; it does
-not state the factorial evaluation of Theorem~\ref{thm:factorial}. The argument here does not use
-Baker's congruence or the signed discriminant-ratio identity as an input.
-
-\citet[Theorem~3, p.~72; \S4]{Landweber88} gives the
-half-exponent identity
-$\Delta^{(p^2-1)/24}=(e_a-e_b)^{(p^2-1)/4}$ for supersingular
-models $y^2=4\prod_{a=1}^3(x-e_a)$ and $a\ne b$.
-Theorem~\ref{thm:C} instead compares discriminants along a prime-degree
-isogeny, with its differential normalization explicit, and determines
-the sign from Theorem~\ref{thm:factorial} and Robert's identity.
-\citet[Theorem~1.2 and Remark~4]{Ono25}
-proves the squared isogeny-ratio identity and records examples with nontrivial
-half-exponent sign. His work develops the supersingular congruences arising in
-the description of the divided beta family by \citet[Theorem~1.2]{Behrens09}
-and the explicit calculations of \citet[\S5.4, Conjecture~5.17]{Larson20}.
-These connections motivate the discriminant identity; no new statement about the
-Adams--Novikov spectral sequence is needed here.
+The sign input, Theorem~\ref{thm:input}, combines \citet{Baker98} with
+\citet{JordanFactorial}; the remaining ingredients are as follows.
 
 The derivative argument in Section~\ref{sec:kz} follows the level-one
 method presented by \citet[\S10]{KZ98}, who trace it to Koike's work
@@ -421,7 +342,7 @@ on Atkin's congruences \citep{Koike73}. The period formula of
 \citet{dS94} and Baker's congruence supply the level-one precedents
 for the residue product and its sign; \citet{BL18} treat the
 corresponding Legendre modular polynomials. The Fricke application
-combines this derivative method with the factorial evaluation and
+combines this derivative method with Theorem~\ref{thm:input} and
 the effective ramification indices of the quotient.
 
 Fricke supersingular polynomials are studied by \citet{Sakai11,Sakai14},
@@ -453,295 +374,20 @@ approximation by holomorphic cusp forms concerns a different setting
 from our first-step modulo-$p$ pole divisor and signed residue formula.
 
 \paragraph{Organization.}
-Section~\ref{sec:factorial} proves the factorial evaluation and
-Corollary~\ref{cor:D}. Section~\ref{sec:proof} proves the signed
-discriminant-ratio identity. Sections~\ref{sec:imports}--\ref{sec:kz}
-develop the Fricke application, from the integral coordinate and residue
-criterion to the weighted signed formula. Section~\ref{sec:geometry}
-interprets the weights geometrically, and Section~\ref{sec:comp}
-records finite certificates and exact-arithmetic evidence.
+Section~\ref{sec:imports} constructs the integral coordinate and proves
+the residue criterion. Section~\ref{sec:weights} treats the effective
+indices and the weighted supersingular polynomial. Section~\ref{sec:kz}
+proves Theorem~\ref{thm:main}. Section~\ref{sec:geometry} interprets the
+weights geometrically, and Section~\ref{sec:comp} records finite
+certificates and exact-arithmetic evidence.
 
 \paragraph{Acknowledgement of AI assistance.}
-OpenAI GPT-6.1 Sol and Claude Opus 5.5 assisted in developing arguments, checking 
-calculations and preparing this manuscript, including the factorial-evaluation 
-argument and its exact-arithmetic verification code. The source computations
+% TODO(author): confirm this statement (including the list of models) and
+% check the target journal's AI policy.
+OpenAI GPT-6.1 Sol and Claude Opus 5.5 assisted in developing arguments, checking
+calculations and preparing this manuscript. The source computations
 and proof checks are documented in the supplementary packages.
-This assistance does not constitute independent specialist refereeing.
-
-\section{The supersingular factorial evaluation}\label{sec:factorial}
-Put $h=(p-1)/2$ and $m=(p+1)/2$, so $m+h=p$ and
-$m+h(p+1)=pm$. We prove Theorem~\ref{thm:factorial} by comparing two
-expressions for an iterated theta operator applied to $F=\eta^{p+1}$.
-The leading coefficient calculation is the one underlying Serre's
-functional equation for Eisenstein series, as presented by
-\citet[\S2.5, Th\'eor\`eme~2, p.~119]{Robert80}. The choice of $F$ makes
-its quadratic twist explicit at every $p\ge5$.
-
-\subsection{A form at full level twelve}
-Work on a geometrically connected component $X(12)$ of the compactified
-full-level modular curve, over $R=\Z_{(p)}[\zeta_{12}]$ localized at a
-prime above $p$. This is a smooth proper curve carrying the Hodge line
-bundle $\omega$. Forms of weight $w$ are sections of $\omega^{\otimes w}$;
-a choice of nonzero invariant differential on an elliptic curve allows
-evaluation of such a section. The cusp parameter is $q^{1/12}$.
-We use the integral $q$-expansion principle on this prime-to-$p$ level
-\citep[\S1.6]{Katz73}; see also \citealp{DR73}.
-
-\begin{lemma}\label{lem:eta-level12}
-The function $\eta^2$ is a holomorphic modular form of weight one with
-trivial character on $\Gamma(12)$. In particular
-$F=\eta^{p+1}\in M_m(\Gamma(12))$ is integral over $R$, and
-\begin{equation}\label{eq:factorial-Fpowers}
-F^{24}=\Delta^{p+1},\qquad F^{p-1}=\Delta^k.
-\end{equation}
-\end{lemma}
-\begin{proof}
-The eta transformation law \citep[Ch.~4]{Knopp70} gives
-$\eta^2(\gamma\tau)=\nu(\gamma)^2(c\tau+d)\eta^2(\tau)$.
-For $\gamma=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\Gamma(12)$ with
-$c>0$, the multiplier formula for $d$ odd (as here, since $12\mid c$) is
-\[
-\nu(\gamma)^2=
-\exp\!\left(\frac{2\pi i}{12}
-\bigl((a+d)c-bd(c^2-1)+3d-3-3cd\bigr)\right)=1.
-\]
-Here the squared Kronecker-symbol factor is one, and the displayed
-numerator is divisible by $12$. For $c<0$, apply the same formula to
-$-\gamma$: its numerator is $-6$ modulo $12$, so its multiplier squared
-is $-1$; the factor $-c\tau-d$ supplies the other minus sign.
-For $c=0$, $\gamma$ is a translation by a multiple of $12$ and the
-assertion follows from $\eta^2(\tau+12)=\eta^2(\tau)$.
-The form is holomorphic at every cusp. The transformation law and the
-product expansion give integral cusp expansions over $R$ (the multipliers
-are twelfth roots of unity), so the $q$-expansion principle supplies the
-integral section. Raising to the $m$th power gives $F$.
-Both equalities in \eqref{eq:factorial-Fpowers} follow from
-$\eta^{24}=\Delta$ and $24k=p^2-1$.
-\end{proof}
-
-\subsection{The iterated operator and the twist}
-Let $\partial_w=\theta-\frac{w}{12}E_2$ be the Serre derivative.
-It sends $p$-integral forms of weight $w$ to $p$-integral forms of
-weight $w+2$. Define
-\[
-G_0=F,\qquad
-G_{i+1}=E_{p-1}\partial_{w_i}G_i+\frac{w_i}{12}E_{p+1}G_i,
-\qquad w_i=m+i(p+1).
-\]
-Then $G_i$ has weight $w_i$. The Kummer congruences
-$E_{p-1}\equiv1$ and $E_{p+1}\equiv E_2\pmod p$ show that its
-$q$-expansion is $\theta^iF\pmod p$. Moreover
-\begin{equation}\label{eq:factorial-leading}
-G_i=\gamma_i E_{p+1}^{\,i}F+E_{p-1}R_i,\qquad
-\gamma_i=12^{-i}\prod_{j=0}^{i-1}w_j,
-\end{equation}
-with $R_i$ a $p$-integral modular form. This follows by induction: in the
-recursion the derivative term is multiplied by $E_{p-1}$, and the
-remaining term multiplies the leading coefficient by $w_i/12$.
-At $i=h$, Wilson's theorem gives
-\begin{equation}\label{eq:factorial-gamma}
-\overline\gamma_h
-=12^{-h}\prod_{j=0}^{h-1}(m+j)
-=12^{-h}\frac{(p-1)!}{h!}
-=-\frac{12^{-h}}{h!}\quad\text{in }\Fp.
-\end{equation}
-
-Write $\chi_{12}(n)=\leg{12}{n}$ for the Kronecker character, with
-values $1,-1,0$ on $n\equiv\pm1,\pm5$, and nonunits modulo $12$,
-respectively. Euler's pentagonal identity \citep{Apostol90} takes the form
-\[
-\eta(\tau)=\sum_{n\ge1}\chi_{12}(n)q^{n^2/24}.
-\]
-\begin{lemma}[quadratic twist]\label{lem:factorial-twist}
-The following identity holds between mod-$p$ forms of weight $pm$ on
-$\Gamma(12)$:
-\begin{equation}\label{eq:factorial-twist}
-\overline G_h=\Lp6\bigl(A^m\overline F-\chi_{12}(p)\overline F^{\,p}\bigr).
-\end{equation}
-\end{lemma}
-\begin{proof}
-By the product expansion and the freshman's dream,
-$F\equiv\eta(\tau)\eta(p\tau)\pmod p$. Thus
-\[
-\overline F=\sum_{a,b\ge1}\chi_{12}(a)\chi_{12}(b)
-q^{(a^2+pb^2)/24}.
-\]
-Applying $\theta^h$ multiplies each term by
-$((a^2+pb^2)/24)^h$, which is zero modulo $p$ when $p\mid a$
-and equals $\leg{24}{p}=\Lp6$ otherwise.
-The sub-sum with $a=pa'$ is
-\[
-\chi_{12}(p)\sum_{a',b\ge1}\chi_{12}(a')\chi_{12}(b)
-q^{p(b^2+pa'^2)/24}
-=\chi_{12}(p)\overline F^{\,p}.
-\]
-Consequently the $q$-expansion of $\overline G_h$ equals
-$\Lp6(\overline F-\chi_{12}(p)\overline F^{\,p})$.
-The integral forms $G_h$, $E_{p-1}^mF$ and $F^p$ all have weight
-$pm$. Since $A$ has $q$-expansion one, the $q$-expansion principle
-proves \eqref{eq:factorial-twist} as an identity of sections.
-\end{proof}
-
-\begin{proof}[Proof of Theorem~\ref{thm:factorial}]
-Let $(E,\omega_E)$ be supersingular and choose a full level-$12$
-structure $\alpha$ with the fixed Weil pairing. Evaluate
-\eqref{eq:factorial-leading} and \eqref{eq:factorial-twist} at
-$x=(E,\alpha,\omega_E)$. Since $A(x)=0$, they give
-\[
--\frac{12^{-h}}{h!}\,B(E,\omega_E)^h\overline F(x)
-=-\Lp6\chi_{12}(p)\overline F(x)^p.
-\]
-Equation~\eqref{eq:factorial-Fpowers} shows that
-$\overline F(x)\ne0$ and
-$\overline F(x)^{p-1}=\Delta(E,\omega_E)^k$. Hence
-\[
-B(E,\omega_E)^h
-=\Lp6\chi_{12}(p)12^h h!\,\Delta(E,\omega_E)^k.
-\]
-Euler's criterion gives $12^h=\leg{12}{p}=\chi_{12}(p)$,
-so the two character factors cancel. This proves the pointwise formula
-for every supersingular curve, including non-rational $j$-invariants.
-
-For the divisibility statement, work in $\Fb[E_4,E_6]$.
-The Hasse invariant $A$ is squarefree. Its factors are $E_4$ if
-$j=0$ is supersingular, $E_6$ if $j=1728$ is supersingular, and
-$E_4^3-j_0\Delta$ for the remaining supersingular $j_0$
-\citep[\S3]{KZ98}. This is the geometric factorization over $\Fb$;
-the irreducible quadratic factors in $j$ over $\Fp$ in
-\citet[Theorem~1.2]{Baker98} split after extending the constants.
-For $j_0\ne0,1728$, the factor
-\[
-E_4^3-j_0\Delta
-=\left(1-\frac{j_0}{1728}\right)E_4^3
-+\frac{j_0}{1728}E_6^2
-\]
-is irreducible: it has the form $aX^3+bY^2$ with $ab\ne0$.
-The zero set of each factor away from the origin
-parametrizes the corresponding curves with their nonzero differentials.
-The pointwise identity therefore forces each factor to divide
-$B^h-\Lp6h!\Delta^k$, so their product $A$ divides it.
-Divisibility descends to $\Fp[E_4,E_6]$. Conversely, divisibility
-immediately implies the pointwise identity because $A$ vanishes at every
-supersingular curve. The factors $E_4$ and $E_6$ account for the elliptic
-points $j=0,1728$ without extra multiplicities in the graded ring.
-\end{proof}
-
-\begin{proof}[Proof of Corollary~\ref{cor:D}]
-Theorem~\ref{thm:factorial} gives $c(E)=\Lp6h!\in\Fp^\times$
-independently of $E$. Squaring and using
-$(h!)^2=(-1)^{h+1}=-\Lp{-1}$ proves the stated form of
-Baker's congruence. This proof uses neither that congruence nor
-connectivity of supersingular isogeny graphs as an input.
-\end{proof}
-
-\begin{remark}[a limit to higher-root constancy]\label{rem:higher-roots}
-Constancy in Corollary~\ref{cor:D} need not persist for a further
-square root. For $p\equiv1\pmod8$, the ratio
-$\rho_p=B^{(p-1)/4}/\Delta^{(p^2-1)/48}$ has weight zero and satisfies
-$\rho_p^2=c_p$ at supersingular points, but it need not be constant.
-For example, modulo $17$,
-\[
-A=8E_4^4+10E_4E_6^2,\qquad B=7E_4^3E_6+11E_6^3.
-\]
-The two pairs of form values below have $A=0$ and $\Delta\ne0$, and
-hence represent supersingular elliptic curves with nonzero
-invariant differentials. Using $\Delta=(E_4^3-E_6^2)/1728$ gives
-\[
-\begin{array}{c|cc|cc|c}
-j&E_4&E_6&B&\Delta&\rho_{17}=B^4/\Delta^6\\\hline
-0&0&1&11&3&-2\\
-8&3&3&14&14&2
-\end{array}
-\qquad\text{in }\mathbb F_{17}.
-\]
-Both values square to $c_{17}=4$. Thus a uniformly constant
-quarter-power analogue is false. More generally, whenever
-$r\mid h$ and $r\mid k$, the ratio $B^{h/r}/\Delta^{k/r}$ takes at
-most $r$ values, since its $r$th power is $c_p$; this bound alone
-does not imply that all $r$ values occur.
-\end{remark}
-
-\section{Signed discriminant ratios}\label{sec:proof}
-The factorial evaluation makes $c(E)$ constant on the supersingular
-locus. Robert's isogeny identity compares $B$ on the two curves of an
-isogeny and turns this constancy into a formula for their discriminants.
-We first record the differential normalization.
-\begin{lemma}[Robert's isogeny identity]\label{lem:Bisog}
-Let $\ell $ be any prime $\ne p$. Let $x=(E,C)$ be a supersingular point of
-$X_0(\ell )$, $\pi:E\to E'=E/C$, and $\omega=\pi^*\omega'$. Then
-$B(E',\omega')=\ell \,B(E,\omega)$, $A(E',\omega')=A(E,\omega)$ and
-$\Delta(\ell \tau)(x)=\ell ^{-12}\Delta(E',\omega')$.
-\end{lemma}
-\begin{proof}
-The isogeny identity is \citet[Th\'eor\`eme B; \S3.3, Lemma~7]{Robert80}; see also
-\citet[Lemma~2.2]{Baker98}. We verify the normalization by $q$-expansions.
-For a level-one form $f$ of weight $w$, $f(\ell \tau)$ at $(E,C,\omega)$ equals $\ell ^{-w}f(E',\omega')$. Check
-this on $(\mathrm{Tate}(q),\mu_\ell )$, where $E'\cong\mathrm{Tate}(q^\ell )$ and
-$\pi^*\omega_{\rm can}'=\ell \omega_{\rm can}$. The form $E_2(\tau)-\ell E_2(\ell \tau)$ is a holomorphic
-weight-$2$ form on $\Gamma_0(\ell )$ with $p$-integral coefficients. Modulo $p$, the forms
-$B(\tau)-\ell B(\ell \tau)$ and $A\cdot(E_2-\ell E_2(\ell \tau))$ have weight $p+1$ and the same $q$-expansion, so they
-are equal. At a supersingular point this gives $B(E,\omega)=\ell \cdot \ell ^{-(p+1)}B(E',\omega')=\ell ^{-1}B(E',\omega')$,
-because $\ell ^{p-1}=1$. The statement about $A$ follows in the same way from $A(\ell \tau)=A(\tau)$.
-\end{proof}
-
-We use the algebraic unit $D_\ell$ of \eqref{eq:Dmoduli}, with
-$\pi:E\to E'=E/C$ and $\omega=\pi^*\omega'$.
-
-\begin{proof}[Proof of Theorem~\ref{thm:C}]
-At a supersingular point $x=(E,C)$, Lemma~\ref{lem:Bisog} and
-\eqref{eq:Dmoduli} imply
-\[
-\frac{c(E')}{c(E)}
-=\ell^h\left(\frac{\Delta(E,\omega)}{\Delta(E',\omega')}\right)^k
-=\Lp\ell\,D_\ell(x)^k,
-\]
-because $\ell^{12k}=\ell^{(p^2-1)/2}=1$.
-By Corollary~\ref{cor:D}, the left side is one and is nonzero.
-Therefore $D_\ell(x)^k=\Lp\ell$.
-\end{proof}
-
-\begin{corollary}[arbitrary prime-to-$p$ isogenies]\label{cor:degree-n}
-Let $\varphi:E\to E'$ be an isogeny of degree $n\ge1$ between
-supersingular elliptic curves over $\Fb$, with $(n,p)=1$. For any
-nonzero invariant differential $\omega'$ on $E'$, put
-\[
-D_\varphi:=n^{12}
-\frac{\Delta(E,\varphi^*\omega')}{\Delta(E',\omega')}.
-\]
-Then $D_\varphi$ is independent of $\omega'$ and
-\[
-D_\varphi^k=\Lp n.
-\]
-In particular, for cyclic kernels the signed discriminant-ratio
-identity holds on $Y_0(n)_{\Fb}$ for every $n$ prime to $p$.
-\end{corollary}
-\begin{proof}
-Over $\Fb$, factor $\varphi$ into isogenies of prime degree and apply
-Lemma~\ref{lem:Bisog} successively, choosing differentials by pullback.
-This gives $B(E',\omega')=nB(E,\varphi^*\omega')$. Consequently
-\[
-1=\frac{c(E')}{c(E)}
-=n^h\left(\frac{\Delta(E,\varphi^*\omega')}{\Delta(E',\omega')}\right)^k
-=\Lp n\,D_\varphi^k,
-\]
-since $n^{12k}=1$ in $\Fp$. The Legendre symbol is its own inverse.
-The weight of $\Delta$ gives independence of the chosen differential.
-\end{proof}
-
-\begin{remark}[comparison with Ono]\label{rem:ono}
-\citet[Theorem~1.2 and Remark~4]{Ono25} uses the reciprocal
-$R_\ell=\Delta(\ell\tau)/\Delta(\tau)=D_\ell^{-1}$.
-Since a Legendre symbol equals its inverse, Theorem~\ref{thm:C}
-determines the same half-exponent sign for $R_\ell$, namely $\Lp\ell$.
-For example, $\leg2{11}=-1$, as in his example.
-His Theorem~1.3 states that on a model with $p^2$-Frobenius $[-p]$
-and an $\Fq$-rational differential,
-$\Delta(E,\omega)^{2k}=(-1)^{(p+1)/2}$.
-Theorem~\ref{thm:factorial} instead relates $B(E,\omega)^h$ to
-$\Delta(E,\omega)^k$ for every nonzero differential.
-The ratio argument requires no descent of a twenty-fourth root of
-$\Delta$ to $\Fq$.
-\end{remark}
+The author takes responsibility for the entire content of the paper.
 
 \section{Standard inputs and the residue criterion}\label{sec:imports}
 
@@ -801,11 +447,17 @@ The lemma uses genus zero only for the Fricke quotient. Neither its
 proof nor the arguments below require $X_0(N)$ itself to have genus zero.
 
 
-We use the $q$-expansion principle and Kodaira--Spencer isomorphism for prime-to-$p$
-level structures \citep{Katz73,KM85,Gross90}. On a fine moduli cover, the Hasse invariant
-has simple zeros precisely at the supersingular points, and Kodaira--Spencer identifies
-a weight-two form $f$ with $f\,dq/q$. In particular, $\theta T$ represents $dT$.
-We record the statements used repeatedly.
+% TODO(author): the references below are given at section or chapter level;
+% add theorem-level pinpoints after checking them against the sources.
+We use the following standard results for prime-to-$p$ level structures.
+The $q$-expansion principle is \citet[\S1.6]{Katz73}. The Hasse invariant,
+its $q$-expansion and Deligne's congruence $A\equiv E_{p-1}\pmod p$ are
+treated in \citet[\S\S2.0--2.1]{Katz73}. That the Hasse invariant has simple
+zeros, precisely at the supersingular points of a fine moduli cover, is
+Igusa's theorem \citep[Ch.~12]{KM85}. The Kodaira--Spencer isomorphism,
+under which a weight-two form $f$ corresponds to $f\,dq/q$, is in
+\citet[Appendix~1]{Katz73}; see also \citet{Gross90}. In particular,
+$\theta T$ represents $dT$. We record the statements used repeatedly.
 \begin{fact}\label{fact:modp}\leavevmode
 \begin{enumerate}[label=\textup{(\roman*)}]
 \item The $q$-expansion principle holds at prime-to-$p$ level. The forms
@@ -830,10 +482,11 @@ $\Fq$-rational, and $E_1/K$ again has Frobenius $[-p]$.
 \end{lemma}
 \begin{proof}
 A supersingular curve admits a model over $\Fq$
-\citep{Deuring41,Waterhouse69}. For any such model $E/\Fq$, the $p$-power Frobenius $F:E\to E^{(p)}$ and the
+\citep{Deuring41,Waterhouse69}. For any such model $E/\Fq$, the $p$-power Frobenius $\mathrm{Fr}:E\to E^{(p)}$ and the
 Verschiebung $V:E^{(p)}\to E$ are both purely inseparable of degree $p$ (the Hasse invariant
-vanishes), so $F^{(p)}:E^{(p)}\to E^{(p^2)}=E$ and $V$ differ by an automorphism $u$ of $E$:
-$F^{(p)}=u\circ V$, whence $\pi_{p^2}=F^{(p)}\circ F=u\circ V\circ F=u\circ[p]$. Thus
+vanishes), so $\mathrm{Fr}^{(p)}:E^{(p)}\to E^{(p^2)}=E$ and $V$ differ by an automorphism $u$ of $E$:
+$\mathrm{Fr}^{(p)}=u\circ V$, whence
+$\pi_{p^2}=\mathrm{Fr}^{(p)}\circ\mathrm{Fr}=u\circ V\circ\mathrm{Fr}=u\circ[p]$. Thus
 $\pi_{p^2}=p\,u$ with $u\in\Aut(E)$. If $j\ne0,1728$ then $u=\pm1$ and the quadratic twist changes
 the sign; if $j=0$ (resp.\ $1728$) the curve $y^2=x^3+1$ (resp.\ $y^2=x^3+x$) over $\Fp$ has
 trace $0$, so $\pi_{p^2}=\pi_p^2=[-p]$ \citep{Deuring41,Waterhouse69}; see also
@@ -982,15 +635,15 @@ The Fricke stabilizer has order two exactly when $u(x)^2=b_N$.
 
 \begin{lemma}[elliptic values and specialization]\label{lem:elliptic-specialization}
 Let $N\in\mathcal N$ and let
-$h_N(T)=\prod_{\tau}(T-T_N(\tau))$, where $\tau$ runs over the
+$\mathfrak h_N(T)=\prod_{\tau}(T-T_N(\tau))$, where $\tau$ runs over the
 inequivalent elliptic points of $\Gamma_0(N)^+$.
 The fifteen polynomials and their effective indices are given in
 Table~\ref{tab:elliptic-values}.
 For every prime $p\ge5$ with $p\ne N$, the reduction
-$\overline h_N$ is squarefree, and its roots in $\Fb$ are exactly the
+$\overline{\mathfrak h}_N$ is squarefree, and its roots in $\Fb$ are exactly the
 values with effective index $e>1$. Consequently,
 \[
-\gcd(\mathcal S_{N,p},\overline h_N)=\prod_{e_i>1}(T-t_i).
+\gcd(\mathcal S_{N,p},\overline{\mathfrak h}_N)=\prod_{e_i>1}(T-t_i).
 \]
 \end{lemma}
 \begin{proof}
@@ -1013,27 +666,40 @@ nontrivial reduced automorphisms occur only at $j=0,1728$; their
 prime-to-$p$ automorphisms lift with the corresponding CM elliptic curve,
 and an invariant prime-to-$p$ cyclic subgroup lifts uniquely over a
 strict henselian base. Conversely, these automorphisms persist on reduction.
-The displayed Fricke branch equations give finite \'etale fixed-point
-loci away from $6N$: this follows directly from their discriminants.
+The fixed-point scheme of $w_N$ on $X_0(N)_{\Lambda_N}$ is finite
+\'etale over $\Lambda_N$. To see this, let $x$ be a fixed geometric point
+of a fibre. After passing to the strict henselization of the base and
+completing, the local ring at $x$ is $\mathcal O[[z]]$, where $\mathcal O$
+is a complete local ring in which $2$ is invertible. The involution acts
+on the cotangent line of the fibre at $x$ by a sign. The sign is $-1$: a
+tame automorphism of finite order of a smooth connected curve that fixes
+a point and acts trivially on its cotangent line is the identity, whereas
+$w_N$ exchanges the two cusps. Hence $z'=(z-w_N(z))/2$ is again a
+parameter, $\mathcal O[[z]]=\mathcal O[[z']]$, and $w_N(z')=-z'$. The
+ideal generated by all $w_N(f)-f$ is then $(2z')=(z')$, so the
+fixed-point scheme is $\operatorname{Spec}\mathcal O$ near $x$, a section.
+Being also proper and quasi-finite, the fixed-point scheme is finite
+\'etale. Fricke fixed points therefore neither appear nor merge under
+reduction at a prime not dividing $2N$.
 Thus the listed elliptic values specialize to precisely the values with
 $e>1$.
 
-Exact discriminant calculation for every displayed $h_N$ gives
+Exact discriminant calculation for every displayed $\mathfrak h_N$ gives
 \[
-\operatorname{Disc}(h_N)=\pm2^{\lambda_N}3^{\mu_N}N^{\nu_N}
+\operatorname{Disc}(\mathfrak h_N)=\pm2^{\lambda_N}3^{\mu_N}N^{\nu_N}
 \qquad(\lambda_N,\mu_N,\nu_N\ge0).
 \]
-The exact values and model calculations are supplied in
-\path{Fricke_Elliptic_Values_Fifteen_Levels_v1_0}.
+The exact values and model calculations are recorded in the supplementary
+material (Section~\ref{sec:comp}).
 Hence distinct elliptic values cannot collide at any admissible prime,
-so $\overline h_N$ is squarefree. Intersecting its root set with the
+so $\overline{\mathfrak h}_N$ is squarefree. Intersecting its root set with the
 supersingular locus proves the gcd formula.
 \end{proof}
 
 \begin{table}[p]\centering\small
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{cll}\toprule
-$N$ & $h_N(T)$ & Effective indices\\\midrule
+$N$ & $\mathfrak h_N(T)$ & Effective indices\\\midrule
 2 & $(T+104)(T-152)$ & $4,\ 2$\\[3pt]
 3 & $(T+42)(T-66)$ & $6,\ 2$\\[3pt]
 5 & $(T+16)(T^{2}-12T-464)$ & $2,\ 2$\\[3pt]
@@ -1054,7 +720,7 @@ $N$ & $h_N(T)$ & Effective indices\\\midrule
 normalization $T_N=q^{-1}+O(q)$, from \citet[\S4.2, Table~1]{JST19}.
 The indices follow the displayed factors; each index applies to every root
 of its factor. At admissible primes, the supersingular roots of
-$\overline h_N$ are exactly the thick values removed in
+$\overline{\mathfrak h}_N$ are exactly the thick values removed in
 \eqref{eq:elliptic-gcd}.}
 \label{tab:elliptic-values}
 \end{table}
@@ -1065,7 +731,7 @@ As mod-$p$ forms on $\Gamma_0(N)$: $A|_{p-1}W_N=\Lp{N}A$, $\Delta_N|_{24}W_N=\De
 $\theta T|_2W_N=\theta T$.
 \end{lemma}
 \begin{proof}
-For a level-one form $f$ of weight $k$, $f|_kW_N=N^{k/2}f(N\tau)$. The form $E_{p-1}(N\tau)$ has
+For a level-one form $f$ of weight $w$, $f|_wW_N=N^{w/2}f(N\tau)$. The form $E_{p-1}(N\tau)$ has
 $q$-expansion $\equiv1\equiv E_{p-1}(\tau)$, so it equals $A$ modulo $p$ by Fact~\ref{fact:modp}(i);
 and $N^{(p-1)/2}\equiv\Lp N$. The other two identities hold in characteristic $0$:
 $\Delta(-1/(N\tau))\Delta(-1/\tau)=N^{12}\tau^{24}\Delta(N\tau)\Delta(\tau)$, and $T$ is
@@ -1081,11 +747,11 @@ Equivalently, $S=A^{p+1}/\Delta_N^{k}$ as functions on $X_0(N)^+_{\Fp}$. In part
 $\sum_j e_j^{-1}=(N+1)(p-1)/24$.
 \end{proposition}
 \begin{proof}
-$F:=A^{p+1}/\Delta_N^k$ is a ratio of mod-$p$ forms of weight $p^2-1$. By Lemma~\ref{lem:AW} it is
-$w_N$-invariant, since $\Lp N^{p+1}=1$. $\Delta_N$ does not vanish on $Y_0(N)$, so $F$ is regular off the cusp of
+The function $\Sigma:=A^{p+1}/\Delta_N^k$ is a ratio of mod-$p$ forms of weight $p^2-1$. By Lemma~\ref{lem:AW} it is
+$w_N$-invariant, since $\Lp N^{p+1}=1$. $\Delta_N$ does not vanish on $Y_0(N)$, so $\Sigma$ is regular off the cusp of
 $X_0(N)^+$. Its $q$-expansion there is $\Delta_N^{-k}=q^{-(N+1)k}(1+O(q))$, because $A$ has
-$q$-expansion $1$. Hence $F$ is a monic polynomial in $T$ of degree $(N+1)k$. By
-Fact~\ref{fact:modp}(ii) and Lemma~\ref{lem:inertia}(ii), $F$ vanishes exactly at the supersingular
+$q$-expansion $1$. Hence $\Sigma$ is a monic polynomial in $T$ of degree $(N+1)k$. By
+Fact~\ref{fact:modp}(ii) and Lemma~\ref{lem:inertia}(ii), $\Sigma$ vanishes exactly at the supersingular
 $t_j$, to order $(p+1)/e_j$ in $T-t_j$. Comparing degrees gives the mass identity.
 \end{proof}
 
@@ -1104,7 +770,7 @@ Proposition~\ref{prop:S}; use Theorem~\ref{thm:main}(b) for the last assertion.
 \section{The Fricke residue formula}\label{sec:kz}
 We now apply the arithmetic identities to the Fricke setting of
 Section~\ref{sec:intro}. The derivative argument gives the pole support
-and local residues; the factorial congruence determines the signed
+and local residues; Theorem~\ref{thm:input} determines the signed
 weighted product.
 
 \subsection{The derivative and pole support}
@@ -1142,9 +808,9 @@ a'(t):=\frac{da}{dT}(x)=\frac{(B/12)(x)}{(\theta T)(x)^{(p+1)/2}}\ne0,
 By Fact~\ref{fact:modp}(iv) and Lemma~\ref{lem:inertia}(ii), $\theta T$ vanishes to order $e_t-1$ in a
 stack parameter $z$, and $A$ to order $\varepsilon_t$; also $T-t\sim z^{e_t}$. This gives the order formula.
 For thin $t$, the map $X_0(N)\to X_0(N)^+$ is \'etale at $x$ and $\theta T(x)\ne0$. In
-characteristic $0$, for forms $F$ and $M$ of equal weight,
-$\theta(F/M)=(\partial F\cdot M-F\cdot\partial M)/M^2$, where $\partial=\theta-\frac{k}{12}E_2$ is the
-Serre derivative. Apply this with $F=E_{p-1}$ and $M=(\theta T)^{(p-1)/2}$ and reduce modulo $p$; at
+characteristic $0$, for forms $f$ and $M$ of equal weight $w$,
+$\theta(f/M)=(\partial f\cdot M-f\cdot\partial M)/M^2$, where $\partial=\theta-\frac{w}{12}E_2$ is the
+Serre derivative. Apply this with $f=E_{p-1}$ and $M=(\theta T)^{(p-1)/2}$ and reduce modulo $p$; at
 $x$ we have $A(x)=0$. The form $\partial E_{p-1}$ has weight $p+1$ and $q$-expansion
 $\equiv\theta(1)+\frac1{12}E_2\equiv\frac1{12}E_{p+1}$, using the Kummer congruence
 $2(p+1)/B_{p+1}\equiv24$ and $\sigma_p\equiv\sigma_1$. So $\partial A=B/12$ as mod-$p$ forms. Finally
@@ -1170,28 +836,25 @@ $t_i$. Since $R_{N,p}(\infty)=0$, $\deg P<\deg D_{\rm thin}$.
 \begin{proposition}[weighted residue product]\label{prop:product}
 For thin $t_i$ and $x=(E,C)$ over $t_i$,
 \[
-r_iW_i=\frac{B^{p-1}}{\Delta_N^{\,k}}(x)=\beta(E)D_N(x)^k
-=\Lp{N}c(E)c(E'),\qquad \beta(E):=\frac{B(E,\omega)^{p-1}}{\Delta(E,\omega)^{2k}}=c(E)^2.
+r_iW_i=\frac{B^{p-1}}{\Delta_N^{\,k}}(x)=\beta(E)\,D_N(x)^k.
 \]
 \end{proposition}
 \begin{proof}
-Near $x$, Proposition~\ref{prop:S} gives $S(T)=A^{p+1}/\Delta_N^k=a^{p+1}\,Q^{k}$ with
-$Q:=(\theta T)^{12}/\Delta_N$, a function that is regular and nonzero at $x$. Hence
-$W_i=[S/(T-t_i)^{p+1}]_{T=t_i}=a'(t_i)^{p+1}Q(x)^k$. With $r_i=a'(t_i)^{-2}$ this gives
+Near $x$, Proposition~\ref{prop:S} gives $S(T)=A^{p+1}/\Delta_N^k=a^{p+1}\,\xi^{k}$ with
+$\xi:=(\theta T)^{12}/\Delta_N$, a function that is regular and nonzero at $x$. Hence
+$W_i=[S/(T-t_i)^{p+1}]_{T=t_i}=a'(t_i)^{p+1}\xi(x)^k$. With $r_i=a'(t_i)^{-2}$ this gives
 \[
-r_iW_i=a'(t_i)^{p-1}Q(x)^k=\Bigl(\frac{B}{12}\Bigr)^{p-1}(\theta T)^{-\frac{p^2-1}2}\cdot
+r_iW_i=a'(t_i)^{p-1}\xi(x)^k=\Bigl(\frac{B}{12}\Bigr)^{p-1}(\theta T)^{-\frac{p^2-1}2}\cdot
 \frac{(\theta T)^{\frac{p^2-1}{2}}}{\Delta_N^{k}}=\frac{B^{p-1}}{\Delta_N^k}(x).
 \]
-The identity $\Delta_N^k=\Delta^{2k}D_N^{-k}$ gives the second equality. For the third,
-Lemma~\ref{lem:Bisog} gives $\Delta_N(x)=N^{-12}\Delta(E,\omega)\Delta(E',\omega')$ with
-$N^{12k}=N^{(p^2-1)/2}=1$, and $B(E)^{(p-1)/2}=N^{-(p-1)/2}B(E')^{(p-1)/2}=\Lp NB(E')^{(p-1)/2}$.
+Since $\Delta_N=\Delta(\tau)\Delta(N\tau)=\Delta^2/D_N$, we have
+$\Delta_N^k=\Delta^{2k}D_N^{-k}$, which gives the second equality.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main}(e)]
-Proposition~\ref{prop:product} and Corollary~\ref{cor:D} give directly
+Proposition~\ref{prop:product} and Theorem~\ref{thm:input} give directly
 \[
-r_iW_i=\Lp N\,c(E)c(E')
-=\Lp N\,(\Lp6h!)^2=-\Lp{-N}.
+r_iW_i=\beta(E)\,D_N(x)^k=-\Lp{-1}\Lp N=-\Lp{-N}.
 \]
 By Corollary~\ref{cor:rFp}, $r_i\in\Fp^\times$, and hence
 $W_i=-\Lp{-N}r_i^{-1}\in\Fp^\times$.
@@ -1223,14 +886,17 @@ $W_i=-\Lp{-N}/r_i\in\Fp^\times$.
 \section{Geometric interpretation of the weights}\label{sec:geometry}
 The proof of Theorem~\ref{thm:main} is algebraic. We now interpret its weights in
 the integral modular curve, retaining the geometric explanation of pole cancellation.
-Put $W=W(\Fb)$ and let
+Nothing in Sections~\ref{sec:imports}--\ref{sec:kz} depends on this section, and the
+argument given for Proposition~\ref{prop:geometry} is an outline that rests on the
+cited results of Deligne--Rapoport and Liu.
+Let $\mathbb W$ be the ring of Witt vectors of $\Fb$ and let
 \[
-\mathcal B=X_0(Np)^{\mathrm{DR}}_W,\qquad
+\mathcal B=X_0(Np)^{\mathrm{DR}}_{\mathbb W},\qquad
 \mathcal A=\mathcal B/\langle w_N\rangle.
 \]
 Here $\mathcal B$ denotes the coarse Deligne--Rapoport model and $w_N$ is the
 partial Atkin--Lehner involution. A split node with completed local ring
-$W[[s,t]]/(st-p^ev)$, $v$ a unit, has \emph{thickness} $e$.
+$\mathbb W[[s,t]]/(st-p^ev)$, $v$ a unit, has \emph{thickness} $e$.
 
 \begin{proposition}\label{prop:geometry}
 The special fibre of $\mathcal A$ has two components, each isomorphic to
@@ -1243,19 +909,19 @@ e_x=|\Aut(E,C_N)/\{\pm1\}|\,
 Consequently $R_{N,p}$ has a pole at a supersingular value precisely when the
 corresponding node has thickness one.
 \end{proposition}
-\begin{proof}
+\begin{proof}[Outline of proof]
 Deligne--Rapoport's theorem applies with prime-to-$p$ level $N$ and the stabilizer
 of a line in $(\Z/N)^2$ as the auxiliary group
 \citep[V, 1.14--1.20; VI, Theorem~6.9, especially (6.9.1)]{DR73}.
 It gives two copies of $X_0(N)_{\Fb}$ with Frobenius gluing, and the coarse
 completed local ring at $x$ is
 \[
-W[[s,t]]/(st-p^{m_x}),\qquad m_x=|\Aut(E,C_N)/\{\pm1\}|.
+\mathbb W[[s,t]]/(st-p^{m_x}),\qquad m_x=|\Aut(E,C_N)/\{\pm1\}|.
 \]
-The forgetful map $\mathcal B\to X_0(N)_W$ is finite: it is proper and has finite
+The forgetful map $\mathcal B\to X_0(N)_{\mathbb W}$ is finite: it is proper and has finite
 fibres on the generic fibre and on the two special-fibre components.
 Normality identifies $\mathcal B$ with the normalization in its generic function
-field. The generic partial Fricke map covers $w_N$ on $X_0(N)_W$, hence extends
+field. The generic partial Fricke map covers $w_N$ on $X_0(N)_{\mathbb W}$, hence extends
 uniquely by normalization. On the elliptic locus it is
 \[
 (E,C_N,C_p)\longmapsto(E/C_N,E[N]/C_N,q_N(C_p)).
@@ -1264,7 +930,7 @@ Since $q_N$ is prime to $p$, it preserves the Frobenius and Verschiebung compone
 and both branches at a node.
 
 To apply Liu's quotient result, note that $\mathcal B$ is a normal,
-proper flat fibred surface over the DVR $W$, with smooth generic fibre
+proper flat fibred surface over the DVR $\mathbb W$, with smooth generic fibre
 and nodal special fibre. At a fixed geometric node its stabilizer has
 order two, prime to $p$, and acts trivially on its residue field $\Fb$.
 As just shown it preserves both branches. It acts nontrivially on either
@@ -1273,7 +939,7 @@ tame involution, whose derivative at a fixed point is $-1$.
 Taking the branch-preserving quotient therefore multiplies the thickness by
 this order, by \citet[Proposition~10.3.48(b)--(c), pp.~526--528]{Liu02}.
 At a non-fixed node the inertia is trivial and the thickness is unchanged.
-Invariants commute with reduction because $2$ is invertible in $W$.
+Invariants commute with reduction because $2$ is invertible in $\mathbb W$.
 The quotient components are consequently $X_0(N)^+_{\Fb}$, and no node is
 smoothed, since no stabilizer exchanges branches. This proves the thickness formula.
 The last assertion is Theorem~\ref{thm:main}(b).
@@ -1291,24 +957,8 @@ weighted residue product. The same distinction applies at all fifteen levels.
 \end{remark}
 
 \section{Finite certificates and computational evidence}\label{sec:comp}
-For Theorem~\ref{thm:factorial}, exact polynomial remainders and evaluations
-at all 6430 supersingular $j$-values for the 166 primes $5\le p\le997$
-(4734 outside $\Fp$) agree with the asserted constant. Evaluations use three
-randomly rescaled models per value, with additional Legendre and Weierstrass
-coefficient routes. Negating the constant fails at every tested prime.
-The two theta identities in the proof were also checked in
-$\Fp[E_4,E_6]$ at $p=23,47,71,167$, where $\eta^{p+1}$ has level one.
-
-The eta/Frobenius identity was tested independently using normalized
-V\'elu quotients and discriminants, without eta functions or Hauptmoduln.
-For the 15 primes $\ell\le47$ and admissible $5\le p\le199$, all 647 pairs
-and 127541 cyclic-kernel checks gave the asserted discriminant-ratio sign.
-These count kernels on chosen supersingular representatives, not distinct
-coarse points, since automorphisms can identify kernels at $j=0,1728$.
-
-
-A unified exact-arithmetic rerun covers all fifteen levels in $\mathcal N$
-for $5\le p\le47$, excluding $p=N$. The computations reconstruct
+For Theorem~\ref{thm:main}, exact-arithmetic computations cover all fifteen
+levels in $\mathcal N$ for $5\le p\le47$, excluding $p=N$. They reconstruct
 $R_{N,p}$ independently of the signed residue formula and then verify
 that formula. They are checks on the theorems, not inputs to their proofs.
 The following bound specifies the strength of the certificates.
@@ -1359,8 +1009,7 @@ the signed residue formula and the weighted Hasse polynomial.
 
 All 184 admissible pairs pass the finite certificate. They contain
 4458 thin values, of which 3448 lie outside $\Fp$
-(Table~\ref{tab:all-levels}). The freshly reconstructed numerators and
-denominators also agree exactly with the corresponding archived certificates.
+(Table~\ref{tab:all-levels}).
 At every thin value the weighted residue product is
 $-\left(\frac{-N}{p}\right)$; pairs with no thin values have an empty
 residue-product set.
@@ -1386,54 +1035,56 @@ $N$ & certified pairs & thin values & outside $\Fp$\\\midrule
 \midrule
 Total&184&4458&3448\\\bottomrule
 \end{tabular}
-\caption{Unified certified reconstructions at all fifteen levels for
+\caption{Certified reconstructions at all fifteen levels for
 $5\le p\le47$, $p\ne N$. Values are distinct geometric $T_N$-values
 within each pair $(N,p)$; counts are summed over the tested primes.}
-\label{tab:all-levels}\label{tab:n0-levels}\label{tab:new-levels}
+\label{tab:all-levels}
 \end{table}
 
-The broader archived tests remain supplementary evidence. At the original
-five levels, all 222 admissible pairs through $p=211$ are certified
-(6246 thin values, 4696 outside $\Fp$); candidate-free denominator recovery
-was checked through $p=37$, and Hecke polynomials modulo $p^2$ through
-$p=31$. A further 960 pairs for $223\le p\le1499$ were checked using the
+Further tests were run at the five eta-coordinate levels $N\in\mathcal N_0$.
+All 222 admissible pairs through $p=211$ are certified
+(6246 thin values, 4696 outside $\Fp$); recovery of the denominator without
+a candidate was checked through $p=37$, and Hecke polynomials modulo $p^2$
+through $p=31$. A further 960 pairs for $223\le p\le1499$ were checked using the
 double-pole formula of Lemma~\ref{lem:g}; these are not independent
 reconstructions from $T|U_p$.
 
-The fresh all-level records and reproduction script are supplied in
-\path{Fricke_Section8_Unified_Certificates_v1_0}; historical evidence
-packages are retained unchanged.
-
-
-\subsection{Computational consequence}\label{subsec:benchmarks}
+\begin{remark}[size of the input data]\label{rem:datasize}
 Corollary~\ref{cor:reconstruction} reconstructs $R_{N,p}$ from the
-supersingular values and their effective indices, without a long
-$q$-expansion. For fixed $N$, this route works with $O(p)$ supersingular
-values, whereas direct $q$-expansion reconstruction requires $O(p^2)$
-source coefficients. Product and remainder trees give quasi-linear
-polynomial arithmetic in the size of the supplied supersingular data;
-acquiring those data incurs a separate cost. These data-size and
-precision estimates do not assert universal running-time bounds.
-Implementation details, exact comparisons and timings are supplied
-with the supplementary software.
+supersingular values and their effective indices. By the mass identity of
+Proposition~\ref{prop:S} and Lemma~\ref{lem:elliptic-specialization}, there
+are at most $(N+1)(p-1)/24+\deg\mathfrak h_N$ such values. By contrast, the
+certificate of Proposition~\ref{prop:certificate} uses the coefficients of
+$T|U_p$ up to $q^{p^2-d}$, where $d=\deg D_{\rm thin}$, that is, those of $T$ up to $q^{p(p^2-d)}$.
+This compares the size of the input only. Obtaining the supersingular
+values has its own cost, and no claim about running times is made here;
+timings for particular implementations are recorded in the supplementary
+material.
+\end{remark}
 
 \paragraph{Data and software.}
-The supplementary packages \texttt{Signed\_Weighted\_Residue\_v1\_0} and
-\texttt{Eta\_Frobenius\_Lemma\_Audit\_v1\_0} contain Python code, per-pair JSON
-results and reproduction instructions (\texttt{python-flint} 0.9.0 and
-\texttt{mpmath}). The package \path{Factorial_Conjecture_Result_v1_0}
-contains the factorial-evaluation code and its recorded results under
-\texttt{new\_work/}, with reproduction commands in \texttt{run\_all.sh}
-(\texttt{cypari2} 2.2.4, PARI/GP 2.17.2 and \texttt{mpmath} 1.3.0).
-The package \path{Fricke_Fifteen_Levels_Extension_v1_0} contains the
-ten-level verifier, the fresh five-level regression, the model coefficients,
-source provenance and per-pair certificates (\texttt{python-flint} 0.9.0).
-The additional packages \path{Theorem_1_3_Benchmark_v1_0} and
-\path{Corollary_1_2_Reconstruction_Benchmark_v1_0} contain the timing code,
-exact inputs and outputs, raw timing samples, verification records and
-reproduction instructions; detailed benchmarks are confined to the supplementary material.
-The reported ranges are those documented by the exact-arithmetic results
-in these supplementary packages.
+The supplementary material for this paper consists of five packages.
+Their folder names are those of the archived release; they do not reflect
+the current status or numbering of the results.
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+\item \path{Signed_Weighted_Residue_v1_0}: code, per-pair JSON results
+and reproduction instructions for the residue formula at
+$N\in\mathcal N_0$ (\texttt{python-flint} 0.9.0 and \texttt{mpmath}).
+\item \path{Fricke_Fifteen_Levels_Extension_v1_0}: the verifier for the
+ten levels outside $\mathcal N_0$, a regression run at the five levels in
+$\mathcal N_0$, the model coefficients with their provenance, and
+per-pair certificates (\texttt{python-flint} 0.9.0).
+\item \path{Fricke_Section8_Unified_Certificates_v1_0}: the records and
+reproduction script for Table~\ref{tab:all-levels}.
+\item \path{Fricke_Elliptic_Values_Fifteen_Levels_v1_0}: the
+discriminants and model calculations for
+Lemma~\ref{lem:elliptic-specialization}.
+\item \path{Corollary_1_2_Reconstruction_Benchmark_v1_0}: timings for the
+reconstruction of Corollary~\ref{cor:reconstruction} (numbered
+Corollary~1.2 in an earlier draft) at $N\in\mathcal N_0$, with the timing
+code, exact inputs and outputs, raw timing samples and verification
+records.
+\end{itemize}
 \if\relax\detokenize\expandafter{\DataRepositoryURL}\relax
 The code, per-pair data and reproduction instructions are supplied as
 supplementary files with the manuscript.
@@ -1443,18 +1094,9 @@ The code, data and reproduction instructions are publicly available at
 \fi
 
 \section{Further directions}
-The proof of Theorem~\ref{thm:factorial} suggests seeking other families
-of modular forms whose quadratic twists admit similarly explicit
-expressions. Extending this proof strategy would require a suitable
-analogue of the twist identity, together with the necessary weight,
-integrality and nonvanishing properties.
-Remark~\ref{rem:higher-roots} shows that further root extraction need
-not preserve constancy: the half-power evaluation cannot in general
-be replaced by a uniformly constant quarter-power analogue.
-
-The discriminant-ratio identity already holds without a genus-zero
-hypothesis, including for arbitrary prime-to-$p$ isogenies. The Fricke
-application additionally uses an integral genus-zero quotient coordinate,
+The discriminant-ratio identity of Theorem~\ref{thm:input}(ii) holds without
+a genus-zero hypothesis, including for arbitrary prime-to-$p$ isogenies
+\citep{JordanFactorial}. The residue formula additionally uses an integral genus-zero quotient coordinate,
 the Hasse divisor and the Kodaira--Spencer derivative.
 Lemma~\ref{lem:coordinate} supplies this coordinate uniformly for all
 fifteen prime Fricke levels; a coordinate on $X_0(N)$ is unnecessary.
@@ -1464,48 +1106,55 @@ there is no global Hauptmodul, and the residue reconstruction must be
 reformulated geometrically. These extensions of the residue theorem
 remain research questions; neither is established here.
 
-
 \section*{Code and data availability}
 All code, scripts and logs are available in the GitHub repository
 \begin{center}\url{https://github.com/bbrhuft/fricke-signed-residues}\end{center}
-The computational materials described here are those of release v1.13, archived on Zenodo as
-\begin{center}\href{https://doi.org/10.5281/zenodo.24084789}{https://doi.org/10.5281/zenodo.24084789}\end{center}
+The computational materials described here are those of release v2.0 of this repository.
+Earlier versions of this work, in which this paper and its companion formed a single
+manuscript, are archived on Zenodo at
+\href{https://doi.org/10.5281/zenodo.24024359}{doi:10.5281/zenodo.24024359} (v1.11) and
+\href{https://doi.org/10.5281/zenodo.24084789}{doi:10.5281/zenodo.24084789} (v1.13).
 
 \begin{thebibliography}{99}\small
-\bibitem[Apostol(1990)]{Apostol90} Apostol, T.~M. (1990). \emph{Modular Functions and Dirichlet Series in Number Theory}, 2nd ed. Graduate Texts in Mathematics 41. Springer.
-
 \bibitem[Baker(1998)]{Baker98} Baker, A. (1998). A supersingular congruence for modular forms.
 \emph{Acta Arithmetica}, 86(1), 91--100. \url{https://doi.org/10.4064/aa-86-1-91-100}.
 
-\bibitem[Behrens(2009)]{Behrens09} Behrens, M. (2009). Congruences between modular forms given by the divided $\beta$ family in homotopy theory. \emph{Geometry \& Topology}, 13, 319--357. \url{https://doi.org/10.2140/gt.2009.13.319}.
 
 \bibitem[Betina and Lecouturier(2018)]{BL18} Betina, A., \& Lecouturier, E. (2018). Congruence formulas for
 Legendre modular polynomials. \emph{Journal of Number Theory}, 188, 71--87.
+
 
 \bibitem[Bringmann et~al.(2026)]{BGKMR26} Bringmann, K., Guerzhoy, P.,
 Kane, B., Mertens, M., \& Rolen, L. (2026). On $U_p$-congruences for
 meromorphic modular forms via supersingularity. \emph{arXiv:2606.14020v1}.
 \url{https://arxiv.org/abs/2606.14020v1}.
 
+
 \bibitem[Chen et~al.(2019)]{CMT19} Chen, R.~C., Marks, S., \& Tyler, M. (2019).
 $p$-Adic properties of Hauptmoduln with applications to moonshine.
 \emph{SIGMA}, 15, 033, 35 pp. \url{https://doi.org/10.3842/SIGMA.2019.033}.
 
+
 \bibitem[Conway and Norton(1979)]{CN79} Conway, J.~H., \& Norton, S.~P. (1979). Monstrous moonshine.
 \emph{Bulletin of the London Mathematical Society}, 11, 308--339.
+
 
 \bibitem[Deligne and Rapoport(1973)]{DR73} Deligne, P., \& Rapoport, M. (1973). Les sch\'emas de modules de
 courbes elliptiques. In \emph{Modular Functions of One Variable II} (LNM 349, pp.~143--316). Springer.
 
-\bibitem[de~Shalit(1994)]{dS94} de~Shalit, E. (1994). Kronecker's polynomial, supersingular elliptic curves,
-and $p$-adic periods of modular curves. \emph{Contemporary Mathematics}, 165, 135--148.
 
 \bibitem[Deuring(1941)]{Deuring41} Deuring, M. (1941). Die Typen der Multiplikatorenringe elliptischer Funktionenk\"orper. \emph{Abhandlungen aus dem Mathematischen Seminar der Hansischen Universit\"at}, 14, 197--272.
+
 
 \bibitem[Duncan and Swisher(2026)]{DS26} Duncan, J.~F.~R., \& Swisher, H. (2026).
 Modular functions and the monstrous exponents. \emph{arXiv:2602.09135v1}, 9~February~2026. \url{https://arxiv.org/abs/2602.09135v1}.
 
+
 \bibitem[Gross(1990)]{Gross90} Gross, B.~H. (1990). A tameness criterion for Galois representations associated to modular forms (mod $p$). \emph{Duke Mathematical Journal}, 61(2), 445--517.
+
+
+\bibitem[Jordan(2026)]{JordanFactorial} Jordan, D. (2026). A factorial supersingular congruence and
+signed discriminant ratios. Preprint (companion paper). Manuscript, code and data: \url{https://github.com/bbrhuft/factorial-supersingular-congruence}.
 
 \bibitem[Jorgenson et~al.(2019)]{JST19} Jorgenson, J., Smajlovi\'c, L., \& Then, H. (2019).
 The Hauptmodul at elliptic points of certain arithmetic groups.
@@ -1515,37 +1164,39 @@ The elliptic-value tables used here are also available in
 \emph{arXiv:1602.07426v2}, \S4.2, Table~1 and Appendix~C.
 \url{https://arxiv.org/abs/1602.07426v2}.
 
+
 \bibitem[Kaneko and Zagier(1998)]{KZ98} Kaneko, M., \& Zagier, D. (1998). Supersingular $j$-invariants,
 hypergeometric series, and Atkin's orthogonal polynomials. In \emph{Computational Perspectives on Number
 Theory} (AMS/IP Studies in Advanced Mathematics 7, pp.~97--126).
 
-\bibitem[Katz(1973)]{Katz73} Katz, N.~M. (1973). $p$-adic properties of modular schemes and modular forms.
-In \emph{Modular Functions of One Variable III} (LNM 350, pp.~69--190). Springer.
 
 \bibitem[Katz and Mazur(1985)]{KM85} Katz, N.~M., \& Mazur, B. (1985). \emph{Arithmetic Moduli of Elliptic
 Curves} (Annals of Mathematics Studies 108). Princeton University Press.
 
-\bibitem[Knopp(1970)]{Knopp70} Knopp, M.~I. (1970). \emph{Modular Functions in Analytic Number Theory}. Markham.
+
+\bibitem[Katz(1973)]{Katz73} Katz, N.~M. (1973). $p$-adic properties of modular schemes and modular forms.
+In \emph{Modular Functions of One Variable III} (LNM 350, pp.~69--190). Springer.
+
 
 \bibitem[Koike(1973)]{Koike73} Koike, M. (1973). Congruences between modular forms
 and functions and applications to the conjecture of Atkin.
 \emph{Journal of the Faculty of Science, University of Tokyo, Section IA, Mathematics},
 20, 129--169.
 
-\bibitem[Landweber(1988)]{Landweber88} Landweber, P.~S. (1988). Supersingular elliptic curves and congruences for Legendre polynomials. In \emph{Elliptic Curves and Modular Forms in Algebraic Topology}, Lecture Notes in Mathematics 1326, pp.~69--93. Springer.
-
-\bibitem[Larson(2020)]{Larson20} Larson, D.~M. (2020). Explicit modular forms from the divided beta family. \emph{Topology and its Applications}, 273, 107094. \url{https://doi.org/10.1016/j.topol.2020.107094}.
 
 \bibitem[Liu(2002)]{Liu02} Liu, Q. (2002). \emph{Algebraic Geometry and Arithmetic Curves}. Oxford Graduate Texts in Mathematics 6. Oxford University Press.
+
 
 \bibitem[Morton(2023)]{Morton23} Morton, P. (2023). Supersingular conjectures for the
 Fricke group. \emph{International Journal of Number Theory}, 19(4), 803--828.
 \url{https://doi.org/10.1142/S1793042123500409}; preprint
 \url{https://arxiv.org/abs/2105.14532}.
 
+
 \bibitem[Nakaya(2019)]{Nakaya19} Nakaya, T. (2019). The number of linear factors of
 supersingular polynomials and sporadic simple groups. \emph{Journal of Number Theory},
 204, 471--496. \url{https://doi.org/10.1016/j.jnt.2019.04.015}.
+
 
 \bibitem[Ogg(1975)]{Ogg75} Ogg, A.~P. (1975).
 Automorphismes de courbes modulaires.
@@ -1553,9 +1204,9 @@ Automorphismes de courbes modulaires.
 16 (1974--1975), no.~1, expos\'e~7, 1--8.
 \url{https://www.numdam.org/item/SDPP_1974-1975__16_1_A4_0/}.
 
+
 \bibitem[Ono(2026)]{Ono25} Ono, K. (2026). Modular forms for chromatic homotopy: supersingular congruences. \emph{arXiv:2509.16175v2}, 3 July 2026. \url{https://arxiv.org/abs/2509.16175v2}.
 
-\bibitem[Robert(1980)]{Robert80} Robert, G. (1980). Congruences entre s\'eries d'Eisenstein, dans le cas supersingulier. \emph{Inventiones Mathematicae}, 61, 103--158.
 
 \bibitem[SageMath Developers(2026)]{SageModels} The SageMath Developers (2026).
 \emph{Isogenies of small prime degree}, including
@@ -1564,15 +1215,22 @@ Automorphismes de courbes modulaires.
 The exact coefficient data and source checksum used here are preserved
 in the supplementary extension package.
 
+
 \bibitem[Sakai(2011)]{Sakai11} Sakai, Y. (2011). The Atkin orthogonal polynomials for
 the low-level Fricke groups and their application.
 \emph{International Journal of Number Theory}, 7(6), 1637--1661.
 \url{https://doi.org/10.1142/S1793042111004460}.
 
+
 \bibitem[Sakai(2014)]{Sakai14} Sakai, Y. (2014). The Atkin orthogonal polynomials for
 the Fricke groups of levels $5$ and $7$.
 \emph{International Journal of Number Theory}, 10(8), 2243--2255.
 \url{https://doi.org/10.1142/S1793042114500766}.
+
+
+\bibitem[de~Shalit(1994)]{dS94} de~Shalit, E. (1994). Kronecker's polynomial, supersingular elliptic curves,
+and $p$-adic periods of modular curves. \emph{Contemporary Mathematics}, 165, 135--148.
+
 
 \bibitem[Waterhouse(1969)]{Waterhouse69} Waterhouse, W.~C. (1969). Abelian varieties over finite fields. \emph{Annales Scientifiques de l'\'Ecole Normale Sup\'erieure (4)}, 2, 521--560.
 \end{thebibliography}
@@ -1580,3 +1238,4 @@ the Fricke groups of levels $5$ and $7$.
 \noindent{\scshape Maynooth University Social Sciences Institute (MUSSI), Maynooth University, Maynooth, County Kildare, Ireland}\\
 \emph{Email address}: \texttt{David.Jordan@mu.ie}
 \end{document}
+

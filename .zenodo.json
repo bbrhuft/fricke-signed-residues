@@ -1,7 +1,7 @@
 {
-  "title": "A factorial supersingular congruence and signed discriminant ratios: manuscript, code and data (v1.13)",
+  "title": "Supersingular poles and signed residues of prime-level Fricke Hauptmoduln: manuscript, code and data (v2.0)",
   "upload_type": "software",
-  "description": "<p>Manuscript (version 1.13) and supplementary packages for <em>A factorial supersingular congruence and signed discriminant ratios</em>. For every prime p &ge; 5, the paper proves the supersingular congruence E_{p+1}^{(p-1)/2} &equiv; (6/p) ((p-1)/2)! &Delta;^{(p^2-1)/24} mod (p, E_{p-1}), which evaluates the half-power ratio uniformly on the supersingular locus and recovers Baker's congruence on squaring. Combined with Robert's isogeny identity, it shows that (&Delta;(&tau;)/&Delta;(&ell;&tau;))^{(p^2-1)/24} = (&ell;/p) at every supersingular point of X_0(&ell;) for every prime &ell; &ne; p, determining the half-exponent sign in Ono's supersingular discriminant-ratio identity. As an application, for each of the fifteen prime levels N with X_0(N)^+ of genus zero, the paper determines the poles and signed residues of the rational function representing T_N|U_p modulo p.</p><p>Previously titled <em>Supersingular poles and signed residues of prime-level Fricke Hauptmoduln</em> (v1.11).</p><p>The archive contains the LaTeX source and PDF, exact-arithmetic verification code, per-pair certificates and timing benchmarks. Each supplementary package has its own README and SHA-256 manifest.</p><p><strong>Status:</strong> preprint, not yet peer reviewed. AI-assisted (OpenAI GPT-6.1 Sol and Claude Opus 5.5). Code is MIT-licensed; the manuscript and notes are &copy; 2026 David Jordan, all rights reserved, pending publication.</p>",
+  "description": "<p>Manuscript (version 2.0) and supplementary packages for <em>Supersingular poles and signed residues of prime-level Fricke Hauptmoduln</em>. For each of the fifteen prime levels N with X_0(N)^+ of genus zero and every prime p &ge; 5 with p &ne; N, the paper determines the poles and signed residues of the rational function representing T_N|U_p modulo p. Its poles are precisely the supersingular values with effective ramification index one, and each residue multiplied by the weighted product of differences from all other supersingular values equals -(-N/p). The supersingular values and their indices therefore determine the reduced function.</p><p>Version history: v1.11 was published under the present title; v1.13 was retitled <em>A factorial supersingular congruence and signed discriminant ratios</em>. From v2.0 the work is split into two papers, and the factorial congruence paper is archived separately (https://github.com/bbrhuft/factorial-supersingular-congruence).</p><p>The archive contains the LaTeX source and PDF, exact-arithmetic verification code, per-pair certificates and timing benchmarks. Each supplementary package has its own README and SHA-256 manifest.</p><p><strong>Status:</strong> preprint, not yet peer reviewed. AI-assisted (OpenAI GPT-6.1 Sol and Claude Opus 5.5). Code is MIT-licensed; the manuscript and notes are &copy; 2026 David Jordan, all rights reserved, pending publication.</p>",
   "creators": [
     {
       "name": "Jordan, David",
@@ -10,15 +10,20 @@
   ],
   "license": "MIT",
   "keywords": [
-    "supersingular congruences",
-    "Eisenstein series",
-    "discriminant ratios",
-    "isogenies",
     "supersingular elliptic curves",
-    "Fricke Hauptmoduln",
+    "Fricke groups",
+    "Hauptmoduln",
     "Hecke operators",
+    "eta quotients",
     "congruences"
   ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/bbrhuft/factorial-supersingular-congruence",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ],
   "language": "eng",
-  "version": "v1.13"
+  "version": "v2.0"
 }
