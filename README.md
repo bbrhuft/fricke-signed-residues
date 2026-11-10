@@ -1,5 +1,7 @@
 # Supersingular poles and signed residues of prime-level Fricke Hauptmoduln
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24120142.svg)](https://doi.org/10.5281/zenodo.24120142)
+
 **David Jordan** · Maynooth University Social Sciences Institute (MUSSI), Maynooth University · Manuscript v2.0, 9 November 2026
 
 > **Version history.** Up to v1.11 this repository held a single paper under the present title. In v1.13 it was retitled *A factorial supersingular congruence and signed discriminant ratios* and refocused on the factorial congruence. From v2.0 the work is split into two papers: this repository holds the Fricke residue paper under its original title, and the factorial congruence paper, with its three supplementary packages, has moved to [bbrhuft/factorial-supersingular-congruence](https://github.com/bbrhuft/factorial-supersingular-congruence). The earlier combined versions remain archived on Zenodo: v1.11 ([10.5281/zenodo.24024359](https://doi.org/10.5281/zenodo.24024359)) and v1.13 ([10.5281/zenodo.24084789](https://doi.org/10.5281/zenodo.24084789)).
@@ -42,7 +44,7 @@ The ramification indices also describe node thicknesses in the Deligne–Rapopor
 
 ## How to cite
 
-Jordan, D. (2026). *Supersingular poles and signed residues of prime-level Fricke Hauptmoduln: Manuscript, code and data* (Version v2.0) [Computer software]. Zenodo. DOI to be added after the v2.0 release.
+Jordan, D. (2026). *Supersingular poles and signed residues of prime-level Fricke Hauptmoduln: Manuscript, code and data* (Version v2.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24120142
 
 ## Repository layout
 
